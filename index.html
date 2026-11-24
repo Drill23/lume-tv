@@ -116,9 +116,9 @@
               <span class="vip-label">Entre usando o código</span>
               <div class="vip-code-row">
                 <span class="vip-code mono" id="heroCodeText">7W7898</span>
-                <span class="vip-badge">7 dias grátis liberados</span>
+                <span class="vip-badge">Acesso imediato</span>
               </div>
-              <p class="vip-note">Digite esse código ao abrir o app para liberar acesso completo na hora.</p>
+              <p class="vip-note">Digite esse código ao abrir o app para entrar direto no Lume TV.</p>
             </div>
             <button type="button" class="btn btn-glass copy-code-btn" data-code="7W7898">
               <svg class="icon-svg" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -154,9 +154,10 @@
           <div class="stage-hud">
             <div class="hud-pills" role="tablist" aria-label="Prévia rápida da interface">
               <button type="button" class="hud-pill is-active" data-hero-screen="assets/screens/inicio.webp?v=2" data-ambilight="amber">Início</button>
-              <button type="button" class="hud-pill" data-hero-screen="assets/screens/filmes.webp" data-ambilight="coral">Filmes</button>
+              <button type="button" class="hud-pill" data-hero-screen="assets/screens/filmes-grade.webp?v=3" data-ambilight="coral">Filmes</button>
               <button type="button" class="hud-pill" data-hero-screen="assets/screens/series.webp" data-ambilight="blue">Séries</button>
-              <button type="button" class="hud-pill" data-hero-screen="assets/screens/player.webp" data-ambilight="gold">Player</button>
+              <button type="button" class="hud-pill" data-hero-screen="assets/screens/desenhos.webp" data-ambilight="gold">Animes &amp; Desenhos</button>
+              <button type="button" class="hud-pill" data-hero-screen="assets/screens/detalhes.webp" data-ambilight="amber">Detalhes</button>
             </div>
             <div class="hud-tags">
               <span class="hud-tag">YouTube 0 anúncios</span>
@@ -186,7 +187,7 @@
         </div>
         <div class="metric-item">
           <strong class="metric-value mono">7W7898</strong>
-          <span>código para entrar grátis</span>
+          <span>código de entrada</span>
         </div>
       </div>
     </section>
@@ -267,11 +268,11 @@
             </button>
             <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-index="1">
               <span class="tab-num mono">02</span>
-              <span class="tab-title">Fileiras &amp; Catálogo</span>
+              <span class="tab-title">Filmes · Catálogo</span>
             </button>
             <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-index="2">
               <span class="tab-num mono">03</span>
-              <span class="tab-title">Filmes</span>
+              <span class="tab-title">Filmes · Destaques</span>
             </button>
             <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-index="3">
               <span class="tab-num mono">04</span>
@@ -279,15 +280,15 @@
             </button>
             <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-index="4">
               <span class="tab-num mono">05</span>
-              <span class="tab-title">Desenhos &amp; Kids</span>
+              <span class="tab-title">Animes &amp; Desenhos</span>
             </button>
             <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-index="5">
               <span class="tab-num mono">06</span>
-              <span class="tab-title">Detalhes &amp; Episódios</span>
+              <span class="tab-title">Novos Episódios</span>
             </button>
             <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-index="6">
               <span class="tab-num mono">07</span>
-              <span class="tab-title">Player &amp; Legendas</span>
+              <span class="tab-title">Detalhes</span>
             </button>
           </div>
 
@@ -322,27 +323,66 @@
             </figure>
           </div>
 
-          <div class="showcase-thumbs" aria-label="Miniaturas das telas reais">
-            <button type="button" class="thumb-btn is-active" data-index="0" aria-label="Ver tela Início">
-              <img src="assets/screens/inicio.webp?v=2" alt="Miniatura tela inicial" loading="lazy">
+          <!-- Mosaico visual grande com os prints reais descendo nas seções -->
+          <div class="screens-mosaic" aria-label="Galeria de telas reais do Lume TV">
+            <button type="button" class="mosaic-card glass-card" data-mosaic-index="1">
+              <div class="mosaic-media">
+                <img src="assets/screens/filmes-grade.webp?v=3" alt="Catálogo completo de Filmes com capas e filtros de gênero no Lume TV" loading="lazy">
+              </div>
+              <div class="mosaic-meta">
+                <span class="mono mosaic-tag">FILMES · CATÁLOGO</span>
+                <strong>Grade completa com filtros por gênero</strong>
+              </div>
             </button>
-            <button type="button" class="thumb-btn" data-index="1" aria-label="Ver tela Fileiras">
-              <img src="assets/screens/fileiras.webp" alt="Miniatura fileiras" loading="lazy">
+
+            <button type="button" class="mosaic-card glass-card" data-mosaic-index="3">
+              <div class="mosaic-media">
+                <img src="assets/screens/series.webp" alt="Tela de Séries com lançamentos e produções em alta no Lume TV" loading="lazy">
+              </div>
+              <div class="mosaic-meta">
+                <span class="mono mosaic-tag">SÉRIES</span>
+                <strong>Lançamentos, temporadas e séries em alta</strong>
+              </div>
             </button>
-            <button type="button" class="thumb-btn" data-index="2" aria-label="Ver tela Filmes">
-              <img src="assets/screens/filmes.webp" alt="Miniatura filmes" loading="lazy">
+
+            <button type="button" class="mosaic-card glass-card" data-mosaic-index="4">
+              <div class="mosaic-media">
+                <img src="assets/screens/desenhos.webp" alt="Tela de Desenhos e Animes com Black Clover, Attack on Titan e One Piece" loading="lazy">
+              </div>
+              <div class="mosaic-meta">
+                <span class="mono mosaic-tag">ANIMES &amp; DESENHOS</span>
+                <strong>Animes dublados e desenhos separados</strong>
+              </div>
             </button>
-            <button type="button" class="thumb-btn" data-index="3" aria-label="Ver tela Séries">
-              <img src="assets/screens/series.webp" alt="Miniatura séries" loading="lazy">
+
+            <button type="button" class="mosaic-card glass-card" data-mosaic-index="2">
+              <div class="mosaic-media">
+                <img src="assets/screens/filmes.webp" alt="Tela de Filmes com destaques duplos e fileira Em alta no Lume TV" loading="lazy">
+              </div>
+              <div class="mosaic-meta">
+                <span class="mono mosaic-tag">FILMES · DESTAQUES</span>
+                <strong>Estreias no topo e fileiras organizadas</strong>
+              </div>
             </button>
-            <button type="button" class="thumb-btn" data-index="4" aria-label="Ver tela Desenhos">
-              <img src="assets/screens/desenhos.webp" alt="Miniatura desenhos" loading="lazy">
+
+            <button type="button" class="mosaic-card glass-card" data-mosaic-index="5">
+              <div class="mosaic-media">
+                <img src="assets/screens/fileiras.webp" alt="Tela inicial descendo mostrando novos episódios e lembretes" loading="lazy">
+              </div>
+              <div class="mosaic-meta">
+                <span class="mono mosaic-tag">INÍCIO · NOVIDADES</span>
+                <strong>Avisos de novos episódios e lembretes</strong>
+              </div>
             </button>
-            <button type="button" class="thumb-btn" data-index="5" aria-label="Ver tela Detalhes">
-              <img src="assets/screens/detalhes.webp" alt="Miniatura detalhes e episódios" loading="lazy">
-            </button>
-            <button type="button" class="thumb-btn" data-index="6" aria-label="Ver tela Player">
-              <img src="assets/screens/player.webp" alt="Miniatura player áudio e legendas" loading="lazy">
+
+            <button type="button" class="mosaic-card glass-card" data-mosaic-index="6">
+              <div class="mosaic-media">
+                <img src="assets/screens/detalhes.webp" alt="Tela de detalhes de filme com sinopse em português e 1080p" loading="lazy">
+              </div>
+              <div class="mosaic-meta">
+                <span class="mono mosaic-tag">DETALHES DO TÍTULO</span>
+                <strong>Sinopse em PT-BR, elenco e play em 1 clique</strong>
+              </div>
             </button>
           </div>
         </div>
@@ -746,6 +786,11 @@
               </button>
             </div>
 
+            <div class="ticket-preview">
+              <img src="assets/screens/filmes-grade.webp?v=3" alt="Catálogo liberado ao entrar com o código 7W7898" loading="lazy">
+              <span>Tudo desbloqueado ao entrar com <strong class="mono">7W7898</strong></span>
+            </div>
+
             <div class="ticket-steps">
               <div class="t-step">
                 <span class="t-num mono">01</span>
@@ -757,7 +802,7 @@
               </div>
               <div class="t-step">
                 <span class="t-num mono">03</span>
-                <span>Aproveite 7 dias grátis com tudo liberado — incluindo YouTube sem anúncios.</span>
+                <span>Curta tudo liberado na hora — filmes, séries, animes, TV ao vivo e YouTube sem anúncios.</span>
               </div>
             </div>
           </aside>
@@ -852,7 +897,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" hidden>
-              <p>Baixe e abra o Lume TV em qualquer aparelho compatível, escolha a opção de entrar com código e digite <strong class="mono">7W7898</strong>. Na hora sua conta de teste é criada com 7 dias completos liberados para assistir a tudo e testar o YouTube sem anúncios.</p>
+              <p>Baixe e abra o Lume TV em qualquer aparelho compatível, escolha a opção de entrar com código e digite <strong class="mono">7W7898</strong>. Na hora seu acesso completo é liberado para assistir a filmes, séries, animes, TV ao vivo e YouTube sem anúncios.</p>
             </div>
           </div>
 

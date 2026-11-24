@@ -17,46 +17,46 @@
       glow: "radial-gradient(circle, rgba(255,181,71,0.55) 0%, rgba(255,107,107,0.3) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/fileiras.webp",
+      src: "assets/screens/filmes-grade.webp?v=3",
       badge: "TELA REAL 02 / 07",
-      title: "Fileiras, Coleções & Continuar Assistindo",
-      desc: "Navegação fluida por fileiras temáticas, franquias em ordem e retomada do ponto exato em qualquer aparelho.",
-      glow: "radial-gradient(circle, rgba(96,165,250,0.5) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
+      title: "Filmes · Catálogo Completo & Gêneros",
+      desc: "Descendo na aba Filmes: grade linda cheia de pôsteres em alta resolução, filtros por gênero e coleções marcadas.",
+      glow: "radial-gradient(circle, rgba(255,107,107,0.55) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
     },
     {
       src: "assets/screens/filmes.webp",
       badge: "TELA REAL 03 / 07",
-      title: "Catálogo Completo de Filmes",
-      desc: "Lançamentos e clássicos de todas as plataformas de streaming em um só lugar, priorizando português do Brasil em 1080p e 4K.",
-      glow: "radial-gradient(circle, rgba(255,107,107,0.55) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
+      title: "Filmes · Estreias & Em Alta",
+      desc: "Destaques duplos no topo da aba Filmes com acesso em 1 toque e fileira Em alta logo abaixo.",
+      glow: "radial-gradient(circle, rgba(255,138,80,0.55) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
     },
     {
       src: "assets/screens/series.webp",
       badge: "TELA REAL 04 / 07",
-      title: "Séries & Animes Organizados",
-      desc: "Temporadas separadas, pula abertura, próximo episódio com contagem regressiva e filtro inteligente para animes dublados.",
+      title: "Séries · Temporadas & Em Alta",
+      desc: "Destaques de séries e fileiras organizadas, com pula abertura, contagem do próximo episódio e aviso de novos capítulos.",
       glow: "radial-gradient(circle, rgba(168,85,247,0.5) 0%, rgba(96,165,250,0.28) 55%, transparent 80%)"
     },
     {
       src: "assets/screens/desenhos.webp",
       badge: "TELA REAL 05 / 07",
-      title: "Desenhos & Perfil Infantil Blindado",
-      desc: "Aba própria para desenhos com controle parental rígido, limite de tempo diário e bloqueio total de conteúdo adulto e YouTube.",
+      title: "Animes & Desenhos",
+      desc: "Aba dedicada com filtro rápido para Desenhos e Animes — trazendo Black Clover, Attack on Titan, One Piece e muito mais em PT-BR.",
       glow: "radial-gradient(circle, rgba(52,211,153,0.48) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/detalhes.webp",
+      src: "assets/screens/fileiras.webp",
       badge: "TELA REAL 06 / 07",
-      title: "Detalhes, Sinopse Traduzida & Episódios",
-      desc: "Tudo traduzido para português do Brasil, seleção rápida de temporadas, histórico do que já foi visto e play em 1 clique.",
-      glow: "radial-gradient(circle, rgba(250,204,21,0.48) 0%, rgba(255,138,80,0.32) 55%, transparent 80%)"
+      title: "Início · Novos Episódios & Lembretes",
+      desc: "Descendo na tela inicial: avisos de novos episódios das suas séries e alertas do que acabou de chegar.",
+      glow: "radial-gradient(circle, rgba(96,165,250,0.5) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/player.webp",
+      src: "assets/screens/detalhes.webp",
       badge: "TELA REAL 07 / 07",
-      title: "Player Cinema com Áudio, Legendas & Velocidade",
-      desc: "Smart Auto-Sub, ajuste de sincronia de legenda (±0,5 s), troca rápida de versão, velocidade 0.75× a 2.0× e áudio noturno.",
-      glow: "radial-gradient(circle, rgba(255,138,80,0.55) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
+      title: "Detalhes, Sinopse Traduzida & 1080p",
+      desc: "Sinopse traduzida para português do Brasil, nota, elenco, trailer e áudio duplo priorizado.",
+      glow: "radial-gradient(circle, rgba(250,204,21,0.48) 0%, rgba(255,138,80,0.32) 55%, transparent 80%)"
     }
   ];
 
@@ -257,7 +257,7 @@
   const showcaseDesc = document.getElementById("showcaseDesc");
   const showcaseAmbilight = document.getElementById("showcaseAmbilight");
   const showcaseTabs = document.querySelectorAll(".showcase-tab");
-  const thumbBtns = document.querySelectorAll(".thumb-btn");
+  const mosaicCards = document.querySelectorAll("[data-mosaic-index]");
 
   function setScreen(index) {
     const idx = ((index % SCREENS.length) + SCREENS.length) % SCREENS.length;
@@ -277,14 +277,10 @@
       t.classList.toggle("is-active", active);
       t.setAttribute("aria-selected", String(active));
     });
-    thumbBtns.forEach((b, i) => b.classList.toggle("is-active", i === idx));
   }
 
   showcaseTabs.forEach((tab) => {
     tab.addEventListener("click", () => setScreen(Number(tab.dataset.index || 0)));
-  });
-  thumbBtns.forEach((btn) => {
-    btn.addEventListener("click", () => setScreen(Number(btn.dataset.index || 0)));
   });
 
   // Lightbox
@@ -322,6 +318,12 @@
 
   if (openLightboxBtn) openLightboxBtn.addEventListener("click", openLightbox);
   if (showcaseImg) showcaseImg.addEventListener("click", openLightbox);
+  mosaicCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      setScreen(Number(card.dataset.mosaicIndex || 0));
+      openLightbox();
+    });
+  });
   if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
   if (lightboxPrev) {
     lightboxPrev.addEventListener("click", () => {
