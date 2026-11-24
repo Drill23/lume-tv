@@ -10,7 +10,7 @@
   // 1. Dados das 7 telas reais
   const SCREENS = [
     {
-      src: "assets/screens/inicio.webp",
+      src: "assets/screens/inicio.webp?v=2",
       badge: "TELA REAL 01 / 07",
       title: "Início & Destaques Cinematográficos",
       desc: "Abertura instantânea com carrossel em destaque, bordas luminosas nítidas e acesso direto ao que você estava assistindo.",
