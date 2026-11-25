@@ -7,60 +7,7 @@
 
   const ACCESS_CODE = "HJUZJ4";
 
-  // 1. Dados das 7 telas limpas da interface do player
-  const SCREENS = [
-    {
-      src: "assets/screens/inicio.webp?v=4",
-      badge: "INTERFACE 01 / 07",
-      title: "Início & Destaques do Player",
-      desc: "Abertura instantânea em Liquid Glass com carrossel em destaque, atalhos para catálogos e acesso direto de onde você parou.",
-      glow: "radial-gradient(circle, rgba(255,181,71,0.55) 0%, rgba(255,107,107,0.3) 55%, transparent 80%)"
-    },
-    {
-      src: "assets/screens/filmes-grade.webp?v=4",
-      badge: "INTERFACE 02 / 07",
-      title: "Catálogo de Filmes & Filtros",
-      desc: "Grade completa e organizada para explorar grandes catálogos de filmes por gênero, coleção e popularidade, com metadados em PT-BR.",
-      glow: "radial-gradient(circle, rgba(255,107,107,0.55) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
-    },
-    {
-      src: "assets/screens/filmes.webp?v=4",
-      badge: "INTERFACE 03 / 07",
-      title: "Player em Ação (3 Zonas)",
-      desc: "Controles limpos de reprodução com seleção de áudio PT-BR, Smart Auto-Sub, sincronia de legenda ±0,5 s, velocidade 0.75×–2.0× e Modo Noturno.",
-      glow: "radial-gradient(circle, rgba(255,138,80,0.55) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
-    },
-    {
-      src: "assets/screens/series.webp?v=4",
-      badge: "INTERFACE 04 / 07",
-      title: "Séries · Temporadas & Progresso",
-      desc: "Organização por temporadas e episódios com marcação de concluídos, pula abertura e contagem automática do próximo episódio.",
-      glow: "radial-gradient(circle, rgba(168,85,247,0.5) 0%, rgba(96,165,250,0.28) 55%, transparent 80%)"
-    },
-    {
-      src: "assets/screens/desenhos.webp?v=4",
-      badge: "INTERFACE 05 / 07",
-      title: "Animes, Desenhos & Modo Infantil",
-      desc: "Aba dedicada para catálogos de animes e desenhos com filtro inteligente para áudio PT-BR e Perfil Infantil protegido por PIN.",
-      glow: "radial-gradient(circle, rgba(52,211,153,0.48) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
-    },
-    {
-      src: "assets/screens/fileiras.webp?v=4",
-      badge: "INTERFACE 06 / 07",
-      title: "Listas M3U & Guia de Programação (EPG)",
-      desc: "Reproduza suas listas de canais ao vivo com grade horária EPG das próximas 12h a 24h e troca instantânea.",
-      glow: "radial-gradient(circle, rgba(96,165,250,0.5) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
-    },
-    {
-      src: "assets/screens/detalhes.webp?v=4",
-      badge: "INTERFACE 07 / 07",
-      title: "Detalhes em PT-BR, Perfis & Sincronia",
-      desc: "Sinopses traduzidas, ficha técnica, até 6 perfis independentes com PIN e sincronia de progresso entre TV, celular e Windows.",
-      glow: "radial-gradient(circle, rgba(250,204,21,0.48) 0%, rgba(255,138,80,0.32) 55%, transparent 80%)"
-    }
-  ];
-
-  // 2. Dados da Central de Downloads (links exatos oficiais)
+  // 1. Dados da Central de Downloads (links exatos oficiais)
   const DOWNLOADS = {
     android: {
       badge: "● Versão 2.0.1",
@@ -173,7 +120,7 @@
     }
   };
 
-  // 3. Toast de notificação
+  // 2. Toast de notificação
   const toastEl = document.getElementById("toast");
   const toastText = document.getElementById("toastText");
   let toastTimer = null;
@@ -188,7 +135,7 @@
     }, 2600);
   }
 
-  // 4. Copiar código HJUZJ4 em qualquer botão
+  // 3. Copiar código HJUZJ4 em qualquer botão
   document.querySelectorAll(".copy-code-btn").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const code = btn.dataset.code || ACCESS_CODE;
@@ -220,7 +167,7 @@
     });
   });
 
-  // 5. Menu Mobile
+  // 4. Menu Mobile
   const menuToggle = document.getElementById("menuToggle");
   const mobileDrawer = document.getElementById("mobileDrawer");
   if (menuToggle && mobileDrawer) {
@@ -237,125 +184,7 @@
     });
   }
 
-  // 6. Prévia rápida do Hero
-  const heroPreviewImg = document.getElementById("heroPreviewImg");
-  const heroAmbilight = document.getElementById("heroAmbilight");
-  document.querySelectorAll("[data-hero-screen]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("[data-hero-screen]").forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-      if (heroPreviewImg) heroPreviewImg.src = btn.dataset.heroScreen;
-      if (heroAmbilight) heroAmbilight.dataset.color = btn.dataset.ambilight || "amber";
-    });
-  });
-
-  // 7. Vitrine da Interface + Lightbox
-  let currentScreen = 0;
-  const showcaseImg = document.getElementById("showcaseImg");
-  const showcaseBadge = document.getElementById("showcaseBadge");
-  const showcaseTitle = document.getElementById("showcaseTitle");
-  const showcaseDesc = document.getElementById("showcaseDesc");
-  const showcaseAmbilight = document.getElementById("showcaseAmbilight");
-  const showcaseTabs = document.querySelectorAll(".showcase-tab");
-  const mosaicCards = document.querySelectorAll("[data-mosaic-index]");
-
-  function setScreen(index) {
-    const idx = ((index % SCREENS.length) + SCREENS.length) % SCREENS.length;
-    currentScreen = idx;
-    const item = SCREENS[idx];
-    if (showcaseImg) {
-      showcaseImg.src = item.src;
-      showcaseImg.alt = `${item.title} — interface do Lume TV Player`;
-    }
-    if (showcaseBadge) showcaseBadge.textContent = item.badge;
-    if (showcaseTitle) showcaseTitle.textContent = item.title;
-    if (showcaseDesc) showcaseDesc.textContent = item.desc;
-    if (showcaseAmbilight) showcaseAmbilight.style.background = item.glow;
-
-    showcaseTabs.forEach((t, i) => {
-      const active = i === idx;
-      t.classList.toggle("is-active", active);
-      t.setAttribute("aria-selected", String(active));
-    });
-  }
-
-  showcaseTabs.forEach((tab) => {
-    tab.addEventListener("click", () => setScreen(Number(tab.dataset.index || 0)));
-  });
-
-  // Lightbox
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-  const lightboxCaption = document.getElementById("lightboxCaption");
-  const openLightboxBtn = document.getElementById("openLightboxBtn");
-  const lightboxClose = document.getElementById("lightboxClose");
-  const lightboxPrev = document.getElementById("lightboxPrev");
-  const lightboxNext = document.getElementById("lightboxNext");
-
-  function updateLightbox() {
-    const item = SCREENS[currentScreen];
-    if (lightboxImg) {
-      lightboxImg.src = item.src;
-      lightboxImg.alt = item.title;
-    }
-    if (lightboxCaption) {
-      lightboxCaption.textContent = `${item.title} — ${item.desc}`;
-    }
-  }
-
-  function openLightbox() {
-    if (!lightbox) return;
-    updateLightbox();
-    lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.hidden = true;
-    document.body.style.overflow = "";
-  }
-
-  if (openLightboxBtn) openLightboxBtn.addEventListener("click", openLightbox);
-  if (showcaseImg) showcaseImg.addEventListener("click", openLightbox);
-  mosaicCards.forEach((card) => {
-    card.addEventListener("click", () => {
-      setScreen(Number(card.dataset.mosaicIndex || 0));
-      openLightbox();
-    });
-  });
-  if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
-  if (lightboxPrev) {
-    lightboxPrev.addEventListener("click", () => {
-      setScreen(currentScreen - 1);
-      updateLightbox();
-    });
-  }
-  if (lightboxNext) {
-    lightboxNext.addEventListener("click", () => {
-      setScreen(currentScreen + 1);
-      updateLightbox();
-    });
-  }
-  if (lightbox) {
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-  }
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox || lightbox.hidden) return;
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") {
-      setScreen(currentScreen - 1);
-      updateLightbox();
-    }
-    if (e.key === "ArrowRight") {
-      setScreen(currentScreen + 1);
-      updateLightbox();
-    }
-  });
-
-  // 8. Guia Interativo YouTube (Celular vs TV)
+  // 5. Guia Interativo YouTube (Celular vs TV)
   const ytStep2Title = document.getElementById("ytStep2Title");
   const ytStep2Desc = document.getElementById("ytStep2Desc");
   const miniUiTrigger = document.getElementById("miniUiTrigger");
@@ -379,7 +208,7 @@
     });
   });
 
-  // 9. Central de Download & QR Code Dinâmico
+  // 6. Central de Download & QR Code Dinâmico
   const dlBadge = document.getElementById("dlBadge");
   const dlSize = document.getElementById("dlSize");
   const dlTitle = document.getElementById("dlTitle");
@@ -446,7 +275,7 @@
     });
   });
 
-  // 10. Spotlight especular nos cards Bento (sem mover ou escalar texto)
+  // 7. Spotlight especular nos cards Bento e áreas do player
   document.querySelectorAll(".spotlight-card").forEach((card) => {
     card.addEventListener("pointermove", (e) => {
       const rect = card.getBoundingClientRect();
@@ -455,7 +284,7 @@
     });
   });
 
-  // 11. FAQ Accordion
+  // 8. FAQ Accordion
   document.querySelectorAll(".faq-item").forEach((item) => {
     const btn = item.querySelector(".faq-q");
     const ans = item.querySelector(".faq-a");
@@ -468,7 +297,7 @@
     });
   });
 
-  // 12. Reveal on Scroll
+  // 9. Reveal on Scroll
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
@@ -487,7 +316,7 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // 13. Animação leve Cinema Prism no canvas de fundo
+  // 10. Animação leve Cinema Prism no canvas de fundo
   const canvas = document.getElementById("prismCanvas");
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (canvas && !reducedMotion) {
