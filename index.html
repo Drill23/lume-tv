@@ -9,8 +9,8 @@
   <meta property="og:title" content="Lume TV — Player de Vídeo para Seus Conteúdos">
   <meta property="og:description" content="Seus filmes preferidos, suas séries favoritas, seus animes e suas listas ao vivo em um só player Liquid Glass. O Lume TV não hospeda conteúdos próprios.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://drill23.github.io/lume-tv/">
-  <meta property="og:image" content="https://drill23.github.io/lume-tv/assets/og-lume-tv.png">
+  <meta property="og:url" content="https://lume-tv-be0.pages.dev/">
+  <meta property="og:image" content="https://lume-tv-be0.pages.dev/assets/og-lume-tv.png">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icon-lume.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,15 +36,14 @@
       </a>
 
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#catalogos">Seu Acervo</a>
         <a href="#telas-reais">O Player</a>
         <a href="#youtube" class="nav-yt">
           <span class="pulse-dot" aria-hidden="true"></span>
           Player YouTube
         </a>
-        <a href="#funcoes">Funções</a>
-        <a href="#dispositivos">Aparelhos</a>
         <a href="#baixar">Baixar</a>
+        <a href="#como-instalar">Como Instalar</a>
+        <a href="#apoie" class="nav-support">Apoie esse projeto</a>
       </nav>
 
       <div class="nav-actions">
@@ -70,6 +69,8 @@
       <a href="#youtube">Player YouTube Integrado</a>
       <a href="#funcoes">Todas as funções</a>
       <a href="#dispositivos">Aparelhos e Em Breve</a>
+      <a href="#como-instalar">Como Instalar &amp; Resolver Erros</a>
+      <a href="#apoie">Apoie esse projeto (Pix Solidário)</a>
       <a href="#baixar" class="drawer-cta">Baixar Player + Código HJUZJ4</a>
     </div>
   </header>
@@ -794,12 +795,13 @@
                 <div class="dl-variants" id="dlVariants"></div>
 
                 <div class="dl-howto">
-                  <span class="mono howto-label">COMO INSTALAR</span>
+                  <span class="mono howto-label">RESUMO RÁPIDO</span>
                   <ol id="dlSteps">
                     <li>Aponte a câmera do celular para o QR Code ou toque em <strong>Baixar Lume TV Android</strong>.</li>
                     <li>Abra o arquivo <code>Lume-TV-Android.apk</code> e, se o Android pedir, permita <strong>Instalar apps desconhecidos</strong>.</li>
                     <li>Abra o player, ative com o código <strong class="mono">HJUZJ4</strong> e organize seus conteúdos.</li>
                   </ol>
+                  <a href="#como-instalar" class="guide-jump-link" id="jumpToGuideBtn">Ver guia visual passo a passo e soluções de erros →</a>
                 </div>
               </div>
 
@@ -823,6 +825,58 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GUIA COMPLETO DE INSTALAÇÃO + ERROS COMUNS ==================== -->
+    <section class="section" id="como-instalar">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker mono">GUIA ILUSTRADO · PASSO A PASSO &amp; SOLUÇÕES</span>
+          <h2>Como instalar em cada sistema — e resolver qualquer erro.</h2>
+          <p class="section-sub">
+            Escolha o seu aparelho abaixo para ver o passo a passo desenhado do que aparece na tela, exatamente onde tocar ou clicar e como corrigir os erros mais comuns na hora da instalação.
+          </p>
+        </div>
+
+        <div class="guide-shell glass-panel reveal">
+          <div class="guide-tabs" role="tablist" aria-label="Escolha o sistema operacional para ver o guia de instalação">
+            <button type="button" class="guide-tab is-active" role="tab" aria-selected="true" data-guide="android">Celular Android</button>
+            <button type="button" class="guide-tab" role="tab" aria-selected="false" data-guide="iphone">iPhone (iOS)</button>
+            <button type="button" class="guide-tab" role="tab" aria-selected="false" data-guide="firestick">Fire TV Stick</button>
+            <button type="button" class="guide-tab" role="tab" aria-selected="false" data-guide="androidtv">Android TV / Google TV</button>
+            <button type="button" class="guide-tab" role="tab" aria-selected="false" data-guide="windows">Windows (7 ao 11)</button>
+          </div>
+
+          <!-- Sub-seletor exclusivo do iPhone (SideStore + LocalDevVPN ou LiveContainer) -->
+          <div class="guide-subtabs" id="iphoneMethodTabs" hidden role="tablist" aria-label="Método de instalação no iPhone">
+            <button type="button" class="guide-subtab is-active" role="tab" aria-selected="true" data-ios-method="sidestore">
+              <strong>Opção 1 · SideStore + LocalDevVPN</strong>
+              <span>Renova automático pelo Wi-Fi sem precisar de PC toda semana</span>
+            </button>
+            <button type="button" class="guide-subtab" role="tab" aria-selected="false" data-ios-method="livecontainer">
+              <strong>Opção 2 · LiveContainer (via SideStore)</strong>
+              <span>Recomendado se você já atingiu o limite de 3 apps da conta Apple grátis</span>
+            </button>
+          </div>
+
+          <div class="guide-summary" id="guideSummary"></div>
+
+          <!-- Passos com ilustrações de tela -->
+          <div class="guide-steps-grid" id="guideStepsGrid"></div>
+
+          <!-- Erros mais comuns e soluções -->
+          <div class="troubleshoot-panel" id="troubleshootPanel">
+            <div class="troubleshoot-head">
+              <div>
+                <span class="kicker mono">SOLUÇÃO DE PROBLEMAS</span>
+                <h3 id="troubleshootTitle">Erros mais comuns e como resolver</h3>
+              </div>
+              <span class="mono error-count-pill" id="errorCountPill">6 soluções</span>
+            </div>
+            <div class="error-list" id="errorList"></div>
           </div>
         </div>
       </div>
@@ -914,17 +968,17 @@
         </div>
 
         <!-- Pix Solidário voluntário -->
-        <div class="support-card glass-panel reveal">
+        <div class="support-card glass-panel reveal" id="apoie">
           <div class="support-copy">
-            <span class="kicker mono">PIX SOLIDÁRIO · PROJETO 100% GRATUITO</span>
-            <h3>Gostou do Lume TV? Apoie esse desenvolvedor</h3>
+            <span class="kicker mono">PIX SOLIDÁRIO · PLAYER 100% GRATUITO PARA TODOS</span>
+            <h3>Apoie esse projeto</h3>
             <p>
-              O Lume TV é um projeto independente e totalmente gratuito — não vendemos planos, assinaturas nem conteúdos. Se você gostou do player e quer ajudar para que ele continue existindo e recebendo novidades, escaneie o QR Code ao lado no app do seu banco e apoie com qualquer quantia voluntária via <strong>Pix Solidário</strong>.
+              O Lume TV é um player de vídeo independente e <strong>totalmente gratuito para todo mundo</strong> — não vendemos planos, assinaturas nem conteúdos. Se você gostou do player e puder ajudar para que esse projeto continue existindo e recebendo melhorias, basta escanear o QR Code ao lado no app do seu banco e enviar qualquer quantia voluntária via <strong>Pix Solidário</strong>.
             </p>
           </div>
           <div class="support-qr">
             <div class="qr-frame qr-frame-sm">
-              <img src="assets/qr/qr-pix.svg" alt="QR Code Pix Solidário para apoiar o desenvolvedor do Lume TV Player" width="160" height="160" loading="lazy">
+              <img src="assets/qr/qr-pix.svg" alt="QR Code Pix Solidário para apoiar o projeto Lume TV" width="160" height="160" loading="lazy">
             </div>
             <span class="mono support-qr-label">Pix Solidário · qualquer valor</span>
           </div>
@@ -949,6 +1003,8 @@
         <a href="#telas-reais">O Player</a>
         <a href="#youtube">Player YouTube</a>
         <a href="#baixar">Baixar + QR Code</a>
+        <a href="#como-instalar">Como Instalar</a>
+        <a href="#apoie">Apoie esse projeto</a>
       </div>
 
       <p class="footer-credit">Demerzel Studio</p>
