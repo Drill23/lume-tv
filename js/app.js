@@ -5,7 +5,7 @@
 (() => {
   "use strict";
 
-  const ACCESS_CODE = "7W7898";
+  const ACCESS_CODE = "HJUZJ4";
 
   // 1. Dados das 7 telas reais
   const SCREENS = [
