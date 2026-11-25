@@ -188,7 +188,7 @@
     }, 2600);
   }
 
-  // 4. Copiar código 7W7898 em qualquer botão
+  // 4. Copiar código HJUZJ4 em qualquer botão
   document.querySelectorAll(".copy-code-btn").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const code = btn.dataset.code || ACCESS_CODE;
