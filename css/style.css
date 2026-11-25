@@ -706,6 +706,30 @@ a:focus-visible {
   color: #FFD58E;
 }
 
+.hero-device-render {
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #07080B;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.78);
+}
+
+.hero-device-render img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-device-render::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, rgba(255, 255, 255, 0.06) 0%, transparent 36%);
+  pointer-events: none;
+}
+
 .tv-glare {
   position: absolute;
   inset: 0;

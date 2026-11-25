@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lume TV — Player de Vídeo Cinematográfico e Organizador de Catálogos</title>
-  <meta name="description" content="Player de vídeo e organizador de catálogos gigantescos de filmes, séries, animes, desenhos, listas ao vivo e Player YouTube integrado em português no Fire Stick, Android, Android TV, iPhone e Windows. Não hospeda conteúdos.">
+  <title>Lume TV — Player de Vídeo para Seus Filmes, Séries e Listas</title>
+  <meta name="description" content="Reprodutor de mídia cinematográfico para organizar e assistir aos seus filmes preferidos, suas séries favoritas, seus animes, desenhos e suas listas ao vivo em português no Fire Stick, Android, Android TV, iPhone e Windows. Não hospeda conteúdos.">
   <meta name="theme-color" content="#07080B">
-  <meta property="og:title" content="Lume TV — Player de Vídeo e Organizador de Catálogos">
-  <meta property="og:description" content="Reprodutor de mídia Liquid Glass para organizar e reproduzir seus catálogos de filmes, séries, animes, listas M3U e vídeos em português. Não hospeda conteúdos.">
+  <meta property="og:title" content="Lume TV — Player de Vídeo para Seus Conteúdos">
+  <meta property="og:description" content="Seus filmes preferidos, suas séries favoritas, seus animes e suas listas ao vivo em um só player Liquid Glass. O Lume TV não hospeda conteúdos próprios.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://drill23.github.io/lume-tv/">
   <meta property="og:image" content="https://drill23.github.io/lume-tv/assets/og-lume-tv.png">
@@ -36,7 +36,7 @@
       </a>
 
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#catalogos">Catálogos</a>
+        <a href="#catalogos">Seu Acervo</a>
         <a href="#telas-reais">O Player</a>
         <a href="#youtube" class="nav-yt">
           <span class="pulse-dot" aria-hidden="true"></span>
@@ -65,7 +65,7 @@
 
     <!-- Menu Mobile -->
     <div class="mobile-drawer" id="mobileDrawer" hidden>
-      <a href="#catalogos">Catálogos &amp; Organização</a>
+      <a href="#catalogos">Seu Acervo &amp; Organização</a>
       <a href="#telas-reais">O que tem no Player</a>
       <a href="#youtube">Player YouTube Integrado</a>
       <a href="#funcoes">Todas as funções</a>
@@ -86,12 +86,12 @@
 
           <h1 class="hero-title">
             Seu player de vídeo.<br>
-            Catálogos organizados.<br>
+            Seus conteúdos.<br>
             <em class="serif-accent">Um só cinema.</em>
           </h1>
 
           <p class="hero-subtitle">
-            O <strong>Lume TV</strong> é um reprodutor de mídia e organizador de catálogos feito para reproduzir os seus conteúdos — filmes, séries, animes, desenhos e listas ao vivo — com qualidade de cinema, sinopses e áudio em português do Brasil na TV, celular, iPhone ou Windows.
+            Seus filmes preferidos, suas séries favoritas, seus animes, desenhos e suas listas ao vivo em um só lugar — um reprodutor cinematográfico pensado apenas para organizar e reproduzir o que você já escolheu assistir, com áudio e legendas em português na TV, celular, iPhone ou Windows.
           </p>
 
           <div class="hero-ctas">
@@ -116,9 +116,9 @@
               <span class="vip-label">Ative o player usando o código</span>
               <div class="vip-code-row">
                 <span class="vip-code mono" id="heroCodeText">HJUZJ4</span>
-                <span class="vip-badge">Sincronize perfis e listas</span>
+                <span class="vip-badge">Sincronize seus perfis e listas</span>
               </div>
-              <p class="vip-note">Digite esse código ao abrir o Lume TV para ativar e sincronizar seus perfis e catálogos.</p>
+              <p class="vip-note">Digite esse código ao abrir o Lume TV para ativar e sincronizar seus perfis e listas.</p>
             </div>
             <button type="button" class="btn btn-glass copy-code-btn" data-code="HJUZJ4">
               <svg class="icon-svg" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -130,30 +130,17 @@
           </div>
         </div>
 
-        <!-- Palco Visual Hero limpo: tela inteira apenas com o logo oficial do Lume TV -->
+        <!-- Palco Visual Hero: Notebook aberto + iPhone com Dynamic Island -->
         <div class="hero-stage">
           <div class="stage-ambilight" id="heroAmbilight" aria-hidden="true"></div>
-          <div class="tv-frame hero-tv-frame">
-            <div class="tv-bezel">
-              <div class="tv-screen">
-                <div class="hero-logo-screen">
-                  <div class="hero-logo-orbit">
-                    <img
-                      class="hero-logo-mark"
-                      src="assets/icon-lume.webp"
-                      alt="Logo oficial do Player Lume TV"
-                      width="192"
-                      height="192"
-                      fetchpriority="high"
-                    >
-                  </div>
-                  <p class="hero-logo-title">Lume<strong>TV</strong></p>
-                  <p class="hero-logo-sub mono">Player de Vídeo</p>
-                </div>
-                <div class="tv-glare" aria-hidden="true"></div>
-              </div>
-            </div>
-            <div class="tv-stand" aria-hidden="true"></div>
+          <div class="hero-device-render">
+            <img
+              src="assets/hero-devices.webp?v=1"
+              alt="Notebook aberto e iPhone com Dynamic Island exibindo o Lume TV Player em tela cheia"
+              width="1376"
+              height="768"
+              fetchpriority="high"
+            >
           </div>
 
           <div class="stage-hud">
@@ -191,26 +178,26 @@
       </div>
     </section>
 
-    <!-- ==================== CATÁLOGOS E INDEXADOR DE MÍDIA ==================== -->
+    <!-- ==================== SEU ACERVO EM UM SÓ PLAYER ==================== -->
     <section class="section" id="catalogos">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker mono">PLAYER &amp; ORGANIZADOR DE CATÁLOGOS</span>
-          <h2>Catálogos gigantescos de filmes, séries, animes e listas em um só player.</h2>
+          <span class="kicker mono">SEU ACERVO EM UM SÓ LUGAR</span>
+          <h2>Seus filmes preferidos, suas séries favoritas e suas listas em um só player.</h2>
           <p class="section-sub">
-            O Lume TV não hospeda conteúdo próprio: ele funciona como um reprodutor de vídeo avançado e indexador visual que organiza metadados, sinopses em português, catálogos extensos e listas de reprodução acessadas por você em uma única tela cinematográfica.
+            O Lume TV não disponibiliza nem hospeda arquivos próprios: ele é o seu reprodutor pessoal para organizar e assistir aos filmes, séries, animes, desenhos e listas que você escolher, com visual de cinema.
           </p>
         </div>
 
         <div class="platforms-marquee glass-panel reveal">
           <div class="platforms-grid">
-            <div class="platform-chip"><span class="p-dot p-amber"></span>Catálogo Gigante de Filmes</div>
-            <div class="platform-chip"><span class="p-dot p-blue"></span>Catálogo de Séries</div>
-            <div class="platform-chip"><span class="p-dot p-green"></span>Animes &amp; Desenhos</div>
-            <div class="platform-chip"><span class="p-dot p-indigo"></span>Sagas &amp; Coleções</div>
+            <div class="platform-chip"><span class="p-dot p-amber"></span>Seus Filmes Preferidos</div>
+            <div class="platform-chip"><span class="p-dot p-blue"></span>Suas Séries Favoritas</div>
+            <div class="platform-chip"><span class="p-dot p-green"></span>Seus Animes &amp; Desenhos</div>
+            <div class="platform-chip"><span class="p-dot p-indigo"></span>Suas Sagas &amp; Coleções</div>
             <div class="platform-chip"><span class="p-dot p-sky"></span>Full HD 1080p &amp; 4K</div>
             <div class="platform-chip"><span class="p-dot p-coral"></span>Áudio PT-BR &amp; Legendas</div>
-            <div class="platform-chip"><span class="p-dot p-cyan"></span>Listas M3U &amp; TV ao Vivo</div>
+            <div class="platform-chip"><span class="p-dot p-cyan"></span>Suas Listas M3U &amp; TV</div>
             <div class="platform-chip"><span class="p-dot p-silver"></span>Guia de Programação (EPG)</div>
             <div class="platform-chip"><span class="p-dot p-orange"></span>Perfis &amp; Modo Infantil</div>
             <div class="platform-chip"><span class="p-dot p-red"></span>Sincronia entre Telas</div>
@@ -225,9 +212,9 @@
               <h3>Interface engessada e sem organização</h3>
             </div>
             <ul class="compare-list">
-              <li>Listas secas sem capas, sem sinopse em português e difíceis de navegar na TV</li>
+              <li>Pastas e listas secas sem capas, sem sinopse em português e difíceis de navegar na TV</li>
               <li>Legendas dessincronizadas e sem troca rápida de faixas de áudio</li>
-              <li>Nenhum filtro inteligente para separar áudio dublado em PT-BR</li>
+              <li>Nenhum filtro inteligente para priorizar seus arquivos com áudio dublado em PT-BR</li>
               <li>Começa a assistir na TV e perde o ponto onde parou ao abrir no celular ou PC</li>
             </ul>
           </article>
@@ -238,7 +225,7 @@
               <h3>Seus conteúdos com visual e controle de cinema</h3>
             </div>
             <ul class="compare-list">
-              <li>Catálogos gigantescos de filmes, séries e animes organizados com metadados em PT-BR</li>
+              <li>Seus filmes, suas séries e seus animes organizados com capas, sinopses e metadados em PT-BR</li>
               <li>Áudio em português do Brasil e qualidade 1080p / 4K priorizados automaticamente</li>
               <li>Smart Auto-Sub, ajuste de legenda em ±0,5 s, velocidade 0.75×–2.0× e Player YouTube integrado</li>
               <li>Começa na TV da sala e continua do mesmo segundo no celular, iPhone ou Windows</li>
@@ -253,9 +240,9 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="kicker mono">O QUE VOCÊ ENCONTRA NO PLAYER</span>
-          <h2>Cada seção organizada para você só apertar play.</h2>
+          <h2>Tudo organizado para reproduzir seus conteúdos favoritos.</h2>
           <p class="section-sub">
-            Tudo separado por categorias, com navegação leve para controle remoto na TV e toque instantâneo no celular.
+            Cada área foi pensada para organizar o que você escolhe assistir — com navegação leve para controle remoto na TV e toque instantâneo no celular.
           </p>
         </div>
 
@@ -267,10 +254,10 @@
                 <path d="M3 9h18M9 4v16" stroke="currentColor" stroke-width="1.6"/>
               </svg>
             </div>
-            <span class="area-tag mono">FILMES · CATÁLOGO</span>
-            <h3>Catálogo de Filmes &amp; Filtros</h3>
+            <span class="area-tag mono">SEUS FILMES</span>
+            <h3>Seus filmes preferidos organizados</h3>
             <p>
-              Explore grandes catálogos de filmes com grade organizada por gênero, coleções, sagas e metadados traduzidos em português do Brasil.
+              Organize e reproduza seus filmes favoritos com filtros por gênero, coleções, sagas e metadados traduzidos em português do Brasil.
             </p>
           </article>
 
@@ -280,10 +267,10 @@
                 <path d="M4 6h16M4 12h11M4 18h14m3-5 2 2-2 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <span class="area-tag mono">SÉRIES · TEMPORADAS</span>
-            <h3>Séries, Temporadas &amp; Episódios</h3>
+            <span class="area-tag mono">SUAS SÉRIES</span>
+            <h3>Suas séries favoritas por temporada</h3>
             <p>
-              Organização automática por temporadas e episódios, marcação do que já foi assistido, pula abertura e contagem para o próximo capítulo.
+              Acompanhe suas séries organizadas por temporadas e episódios, com progresso salvo, marcação de assistidos, pula abertura e próximo episódio.
             </p>
           </article>
 
@@ -293,10 +280,10 @@
                 <path d="M12 3a6 6 0 0 1 6 6v3.5l1.5 2.5H4.5L6 12.5V9a6 6 0 0 1 6-6Zm-2 15a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <span class="area-tag mono">ANIMES &amp; KIDS</span>
-            <h3>Animes, Desenhos &amp; Modo Infantil</h3>
+            <span class="area-tag mono">SEUS ANIMES &amp; KIDS</span>
+            <h3>Seus animes, desenhos &amp; Modo Infantil</h3>
             <p>
-              Aba dedicada para catálogos de animes e desenhos com filtro inteligente para priorizar áudio dublado em PT-BR e Perfil Infantil blindado por PIN.
+              Espaço dedicado para seus animes e desenhos com filtro inteligente para priorizar áudio em PT-BR e Perfil Infantil protegido por PIN.
             </p>
           </article>
 
@@ -321,10 +308,10 @@
                 <path d="M7.8 7.8a6 6 0 0 0 0 8.4m8.4-8.4a6 6 0 0 1 0 8.4M4.9 4.9a10 10 0 0 0 0 14.2m14.2-14.2a10 10 0 0 1 0 14.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </div>
-            <span class="area-tag mono">LISTAS M3U &amp; EPG</span>
-            <h3>Listas ao Vivo &amp; Guia 24h</h3>
+            <span class="area-tag mono">SUAS LISTAS M3U</span>
+            <h3>Suas listas ao vivo &amp; Guia 24h</h3>
             <p>
-              Reproduza suas listas de canais ao vivo com suporte a guia de programação EPG completo das próximas 12h a 24h e troca instantânea.
+              Reproduza suas próprias listas M3U com suporte a guia de programação EPG de 12h a 24h e troca instantânea entre canais.
             </p>
           </article>
 
@@ -334,10 +321,10 @@
                 <path d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3ZM8 12a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8 2c-2.3 0-4.5 1.1-5.2 3.2-.2.5.2.8.7.8h9c.5 0 .9-.3.7-.8-.7-2.1-2.9-3.2-5.2-3.2ZM8 14.5c-2.2 0-4.2 1-4.8 3-.2.4.1.5.5.5h5.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </div>
-            <span class="area-tag mono">DETALHES &amp; PERFIS</span>
-            <h3>Sinopses em PT-BR &amp; 6 Perfis</h3>
+            <span class="area-tag mono">SEUS PERFIS</span>
+            <h3>Detalhes em PT-BR &amp; 6 Perfis</h3>
             <p>
-              Ficha técnica e sinopses traduzidas, até 6 perfis independentes com PIN e sincronia de progresso entre TV, celular, iPhone e Windows.
+              Sinopses traduzidas para o seu acervo, até 6 perfis independentes com PIN e continuidade exata entre TV, celular, iPhone e Windows.
             </p>
           </article>
         </div>
@@ -466,7 +453,7 @@
           <span class="kicker mono">RECURSOS DO PLAYER</span>
           <h2>Cada detalhe pensado para você só apertar play.</h2>
           <p class="section-sub">
-            Da organização automática de catálogos e listas até a sincronia fina de legenda dentro do vídeo — conheça as funções do Lume TV Player.
+            Da organização inteligente dos seus filmes, séries e listas até a sincronia fina de legenda dentro do vídeo — conheça as funções do Lume TV Player.
           </p>
         </div>
 
@@ -481,7 +468,7 @@
             <span class="bento-tag mono">IDIOMA &amp; QUALIDADE</span>
             <h3>Português do Brasil sempre em 1º lugar</h3>
             <p>
-              Faixas em português e áudio duplo são priorizados no topo, metadados e sinopses aparecem traduzidos e a resolução Full HD 1080p e 4K tem preferência automática. Nos animes, o classificador inteligente verifica o idioma real de áudio para evitar surpresas.
+              Nos conteúdos que você reproduz, faixas em português e áudio duplo são priorizados no topo, sinopses aparecem traduzidas e a resolução Full HD 1080p e 4K tem preferência automática. Nos seus animes, o classificador inteligente verifica o idioma real de áudio.
             </p>
             <div class="bento-chips">
               <span>1080p &amp; 4K</span>
@@ -521,7 +508,7 @@
             <span class="bento-tag mono">DESEMPENHO</span>
             <h3>Abre e reproduz em ~1,7 s</h3>
             <p>
-              Interface Cinema Prism super leve em GPU e pré-carregamento inteligente para iniciar sua mídia rapidamente sem engasgos.
+              Interface Cinema Prism super leve em GPU e pré-carregamento inteligente para iniciar seus vídeos rapidamente sem engasgos.
             </p>
           </article>
 
@@ -533,8 +520,8 @@
                 <path d="M7.8 7.8a6 6 0 0 0 0 8.4m8.4-8.4a6 6 0 0 1 0 8.4M4.9 4.9a10 10 0 0 0 0 14.2m14.2-14.2a10 10 0 0 1 0 14.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </div>
-            <span class="bento-tag mono">LISTAS &amp; EPG</span>
-            <h3>Listas M3U + Guia de Programação</h3>
+            <span class="bento-tag mono">SUAS LISTAS &amp; EPG</span>
+            <h3>Suas Listas M3U + Guia de Programação</h3>
             <p>
               Reproduza suas listas de canais ao vivo com suporte a guia XMLTV (EPG) completo das próximas 12h a 24h e troca instantânea.
             </p>
@@ -577,9 +564,9 @@
               </svg>
             </div>
             <span class="bento-tag mono">SÉRIES &amp; SAGAS</span>
-            <h3>Pula abertura, Sagas &amp; Em Breve</h3>
+            <h3>Pula abertura, Sagas &amp; Lembretes</h3>
             <p>
-              Contagem automática do próximo episódio, organização de coleções na ordem certa e lembretes de estreias na aba <em>Em Breve</em>.
+              Contagem automática do próximo episódio, organização das suas coleções na ordem certa e lembretes do que você acompanha na aba <em>Em Breve</em>.
             </p>
           </article>
 
@@ -595,7 +582,7 @@
             <span class="bento-tag mono">CONTROLE NA MÃO</span>
             <h3>Celular vira controle remoto</h3>
             <p>
-              Navegue pelos seus catálogos no celular e envie com um toque para reproduzir direto na tela grande da TV da sala.
+              Navegue pelos seus filmes e séries no celular e envie com um toque para reproduzir direto na tela grande da TV da sala.
             </p>
           </article>
 
@@ -643,7 +630,7 @@
               <span class="mono device-arch">TV</span>
             </div>
             <h3>Android TV &amp; Google TV</h3>
-            <p>Navegação 100% pelo controle remoto, grade de catálogos em tela cheia e reprodução fluida na sua Smart TV ou TV Box.</p>
+            <p>Navegação 100% pelo controle remoto para organizar seus filmes, séries e listas em tela cheia na sua Smart TV ou TV Box.</p>
           </article>
 
           <article class="glass-card device-card">
@@ -652,7 +639,7 @@
               <span class="mono device-arch">32-bit</span>
             </div>
             <h3>Amazon Fire TV Stick</h3>
-            <p>Versão ultraleve otimizada para o Fire Stick rodar fluido a 60 fps e com consumo mínimo de memória.</p>
+            <p>Versão ultraleve otimizada para o Fire Stick rodar seus vídeos a 60 fps com consumo mínimo de memória.</p>
           </article>
 
           <article class="glass-card device-card">
@@ -670,7 +657,7 @@
               <span class="mono device-arch">iOS</span>
             </div>
             <h3>iPhone (iOS)</h3>
-            <p>Visual Liquid Glass feito para iPhone, suporte a Picture-in-Picture (PiP) e armazenamento offline de episódios.</p>
+            <p>Visual Liquid Glass feito para iPhone, suporte a Picture-in-Picture (PiP) e armazenamento offline dos seus episódios.</p>
           </article>
         </div>
 
@@ -701,7 +688,7 @@
               </div>
               <h4>Samsung Smart TV (Tizen OS / One UI Tizen)</h4>
               <p>
-                Versão nativa para Smart TVs Samsung com sistema <strong>Tizen OS</strong> (incluindo a interface <strong>One UI Tizen</strong>), levando o player de catálogos, listas ao vivo e Player YouTube integrado direto para sua TV Samsung.
+                Versão nativa para Smart TVs Samsung com sistema <strong>Tizen OS</strong> (incluindo a interface <strong>One UI Tizen</strong>), levando o seu player pessoal para organizar e assistir aos seus conteúdos direto na sua TV Samsung.
               </p>
             </article>
           </div>
@@ -746,7 +733,7 @@
               <img src="assets/icon-lume.webp" alt="Logo oficial do Lume TV Player" width="60" height="60" loading="lazy">
               <div class="ticket-logo-copy">
                 <strong>Lume TV Player</strong>
-                <span>Perfis e catálogos sincronizados com <strong class="mono">HJUZJ4</strong></span>
+                <span>Seus perfis e listas sincronizados com <strong class="mono">HJUZJ4</strong></span>
               </div>
             </div>
 
@@ -761,7 +748,7 @@
               </div>
               <div class="t-step">
                 <span class="t-num mono">03</span>
-                <span>Organize seus catálogos, listas M3U e reproduza seus conteúdos em qualquer tela.</span>
+                <span>Organize seus filmes, séries, animes e suas listas em qualquer tela.</span>
               </div>
             </div>
           </aside>
@@ -811,7 +798,7 @@
                   <ol id="dlSteps">
                     <li>Aponte a câmera do celular para o QR Code ou toque em <strong>Baixar Lume TV Android</strong>.</li>
                     <li>Abra o arquivo <code>Lume-TV-Android.apk</code> e, se o Android pedir, permita <strong>Instalar apps desconhecidos</strong>.</li>
-                    <li>Abra o player, ative com o código <strong class="mono">HJUZJ4</strong> e organize seus catálogos.</li>
+                    <li>Abra o player, ative com o código <strong class="mono">HJUZJ4</strong> e organize seus conteúdos.</li>
                   </ol>
                 </div>
               </div>
@@ -852,11 +839,11 @@
         <div class="faq-list reveal">
           <div class="faq-item glass-card">
             <button type="button" class="faq-q" aria-expanded="false">
-              <span>O que é o Lume TV? Ele hospeda filmes, séries ou canais?</span>
+              <span>O que é o Lume TV? Ele hospeda ou disponibiliza filmes e séries?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" hidden>
-              <p>Não. O <strong>Lume TV é exclusivamente um player de vídeo (reprodutor de mídia) e organizador de catálogos</strong>. O aplicativo não hospeda, armazena, comercializa ou distribui filmes, séries, canais ou arquivos de vídeo próprios. Ele apenas organiza metadados públicos e reproduz os conteúdos, catálogos e listas acessados pelo próprio usuário.</p>
+              <p>Não. O <strong>Lume TV é exclusivamente um player de vídeo (reprodutor de mídia) e organizador pessoal</strong>. O aplicativo não hospeda, armazena, comercializa nem disponibiliza filmes, séries, canais ou arquivos de vídeo próprios. Ele serve apenas para você organizar e reproduzir seus próprios conteúdos, listas e fontes escolhidas por você.</p>
             </div>
           </div>
 
@@ -866,7 +853,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" hidden>
-              <p>Baixe e abra o Lume TV Player em qualquer aparelho compatível, escolha a opção de entrar com código e digite <strong class="mono">HJUZJ4</strong>. Ele ativa os recursos do reprodutor e permite organizar e sincronizar seus perfis, listas e progresso entre telas.</p>
+              <p>Baixe e abra o Lume TV Player em qualquer aparelho compatível, escolha a opção de entrar com código e digite <strong class="mono">HJUZJ4</strong>. Ele ativa os recursos do reprodutor e permite sincronizar seus perfis, suas listas e seu progresso entre telas.</p>
             </div>
           </div>
 
@@ -896,7 +883,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" hidden>
-              <p>Sim. O Modo Infantil filtra o catálogo para exibir apenas animações adequadas, oculta canais e conteúdos fora da faixa etária, não exibe o módulo do YouTube e permite definir PIN nos perfis adultos além de limite de tempo diário.</p>
+              <p>Sim. O Modo Infantil filtra a interface para exibir apenas animações adequadas, oculta listas e conteúdos fora da faixa etária, não exibe o módulo do YouTube e permite definir PIN nos perfis adultos além de limite de tempo diário.</p>
             </div>
           </div>
 
@@ -915,9 +902,9 @@
         <div class="legal-notice glass-panel reveal">
           <div class="legal-copy">
             <span class="kicker mono">AVISO DE TRANSPARÊNCIA · PLAYER DE VÍDEO</span>
-            <h3>Software reprodutor de mídia e organizador de catálogos</h3>
+            <h3>Software reprodutor de mídia pessoal</h3>
             <p>
-              O Lume TV é exclusivamente um player de vídeo desenvolvido para organizar metadados e reproduzir conteúdos, catálogos e listas acessados pelo usuário. Não hospedamos, armazenamos, vendemos ou distribuímos arquivos de mídia protegidos por direitos autorais. Cada usuário é responsável pelas listas e fontes que reproduz no aplicativo.
+              O Lume TV é exclusivamente um player de vídeo desenvolvido para organizar metadados e reproduzir os filmes, séries, animes e listas que o próprio usuário escolhe assistir. Não hospedamos, armazenamos, vendemos ou distribuímos arquivos de mídia próprios. Cada usuário é responsável pelos conteúdos e listas que reproduz no aplicativo.
             </p>
           </div>
           <div class="legal-badge">
@@ -958,7 +945,7 @@
       </div>
 
       <div class="footer-links">
-        <a href="#catalogos">Catálogos</a>
+        <a href="#catalogos">Seu Acervo</a>
         <a href="#telas-reais">O Player</a>
         <a href="#youtube">Player YouTube</a>
         <a href="#baixar">Baixar + QR Code</a>

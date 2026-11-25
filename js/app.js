@@ -25,7 +25,7 @@
       steps: [
         "Aponte a câmera do celular para o QR Code ou toque em <strong>Baixar Lume TV Android</strong>.",
         "Abra o arquivo <code>Lume-TV-Android.apk</code> e, se o Android pedir, permita <strong>Instalar apps desconhecidos</strong>.",
-        `Abra o player, ative com o código <strong class="mono">${ACCESS_CODE}</strong> e organize seus catálogos.`
+        `Abra o player, ative com o código <strong class="mono">${ACCESS_CODE}</strong> e organize seus conteúdos.`
       ],
       qr: "assets/qr/qr-android.svg",
       qrTitle: "Aponte a câmera do celular",
@@ -36,7 +36,7 @@
       badge: "● Versão 2.0.1",
       size: "APK 32 bits Leve · 25,1 MB",
       title: "Lume TV Player para Amazon Fire TV Stick",
-      desc: "Compilação leve feita sob medida para o player rodar a 60 fps no Fire Stick sem travar nem ocupar espaço.",
+      desc: "Compilação leve feita sob medida para o player reproduzir seus vídeos a 60 fps no Fire Stick sem travar nem ocupar espaço.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-FireStick.apk",
       mainLabel: "Baixar versão Fire Stick (.apk)",
       variants: [
@@ -59,7 +59,7 @@
       badge: "● Versão 2.0.1",
       size: "APK Universal · 47,8 MB",
       title: "Lume TV Player para Android TV & Google TV",
-      desc: "Interface feita para o controle remoto com navegação fluida, organização de catálogos, listas M3U e áudio PT-BR priorizado.",
+      desc: "Interface feita para o controle remoto para você organizar seus filmes, séries e suas listas M3U com áudio PT-BR priorizado.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
       mainLabel: "Baixar para Android TV (.apk)",
       variants: [],
@@ -104,7 +104,7 @@
       badge: "● Versão 2.0.1",
       size: "Pacote iOS (.ipa) · 46,2 MB",
       title: "Lume TV Player para iPhone (iOS)",
-      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), reprodução offline e envio direto de mídia para a TV.",
+      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), reprodução offline dos seus episódios e envio direto para a TV.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-iPhone.ipa",
       mainLabel: "Baixar Lume TV iPhone (.ipa)",
       variants: [],
