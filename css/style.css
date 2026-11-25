@@ -736,7 +736,7 @@ a:focus-visible {
   color: var(--text-soft);
 }
 
-/* ==================== PLATAFORMAS REUNIDAS ==================== */
+/* ==================== CATÁLOGOS E COMPARATIVO ==================== */
 .platforms-marquee {
   padding: 24px;
   margin-bottom: 24px;
@@ -983,7 +983,7 @@ a:focus-visible {
   color: var(--text);
 }
 
-/* ==================== YOUTUBE PREMIUM GRÁTIS ==================== */
+/* ==================== PLAYER YOUTUBE INTEGRADO ==================== */
 .yt-showcase {
   padding: 28px;
   overflow: hidden;
@@ -1774,42 +1774,46 @@ a:focus-visible {
   margin: 0;
 }
 
-.support-card {
+.legal-notice {
   margin-top: 26px;
   padding: 24px 28px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 24px;
   align-items: center;
-  border-color: rgba(52, 211, 153, 0.34);
+  border-color: rgba(255, 181, 71, 0.32);
 }
 
-.support-copy h3 {
+.legal-copy h3 {
   margin: 0 0 8px;
-  font-size: 1.32rem;
+  font-size: 1.28rem;
 }
 
-.support-copy p {
+.legal-copy p {
   margin: 0;
   color: var(--text-soft);
   font-size: 0.95rem;
 }
 
-.support-qr {
+.legal-badge {
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: rgba(255, 181, 71, 0.1);
+  border: 1px solid rgba(255, 181, 71, 0.36);
   text-align: center;
 }
 
-.qr-frame-sm {
-  width: 152px;
-  margin-bottom: 8px;
-  padding: 8px;
-  border-radius: 14px;
+.legal-badge strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #FFD58E;
 }
 
-.support-qr-label {
+.legal-badge span {
   display: block;
-  font-size: 0.74rem;
-  color: #86EFAC;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: var(--text-soft);
 }
 
 /* ==================== FOOTER ==================== */
@@ -2052,7 +2056,7 @@ a:focus-visible {
   .screens-mosaic {
     grid-template-columns: 1fr;
   }
-  .support-card {
+  .legal-notice {
     grid-template-columns: 1fr;
     text-align: center;
   }

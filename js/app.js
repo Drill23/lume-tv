@@ -7,55 +7,55 @@
 
   const ACCESS_CODE = "HJUZJ4";
 
-  // 1. Dados das 7 telas reais
+  // 1. Dados das 7 telas limpas da interface do player
   const SCREENS = [
     {
-      src: "assets/screens/inicio.webp?v=2",
-      badge: "TELA REAL 01 / 07",
-      title: "Início & Destaques Cinematográficos",
-      desc: "Abertura instantânea com carrossel em destaque, bordas luminosas nítidas e acesso direto ao que você estava assistindo.",
+      src: "assets/screens/inicio.webp?v=4",
+      badge: "INTERFACE 01 / 07",
+      title: "Início & Destaques do Player",
+      desc: "Abertura instantânea em Liquid Glass com carrossel em destaque, atalhos para catálogos e acesso direto de onde você parou.",
       glow: "radial-gradient(circle, rgba(255,181,71,0.55) 0%, rgba(255,107,107,0.3) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/filmes-grade.webp?v=3",
-      badge: "TELA REAL 02 / 07",
-      title: "Filmes · Catálogo Completo & Gêneros",
-      desc: "Descendo na aba Filmes: grade linda cheia de pôsteres em alta resolução, filtros por gênero e coleções marcadas.",
+      src: "assets/screens/filmes-grade.webp?v=4",
+      badge: "INTERFACE 02 / 07",
+      title: "Catálogo de Filmes & Filtros",
+      desc: "Grade completa e organizada para explorar grandes catálogos de filmes por gênero, coleção e popularidade, com metadados em PT-BR.",
       glow: "radial-gradient(circle, rgba(255,107,107,0.55) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/filmes.webp",
-      badge: "TELA REAL 03 / 07",
-      title: "Filmes · Estreias & Em Alta",
-      desc: "Destaques duplos no topo da aba Filmes com acesso em 1 toque e fileira Em alta logo abaixo.",
+      src: "assets/screens/filmes.webp?v=4",
+      badge: "INTERFACE 03 / 07",
+      title: "Player em Ação (3 Zonas)",
+      desc: "Controles limpos de reprodução com seleção de áudio PT-BR, Smart Auto-Sub, sincronia de legenda ±0,5 s, velocidade 0.75×–2.0× e Modo Noturno.",
       glow: "radial-gradient(circle, rgba(255,138,80,0.55) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/series.webp",
-      badge: "TELA REAL 04 / 07",
-      title: "Séries · Temporadas & Em Alta",
-      desc: "Destaques de séries e fileiras organizadas, com pula abertura, contagem do próximo episódio e aviso de novos capítulos.",
+      src: "assets/screens/series.webp?v=4",
+      badge: "INTERFACE 04 / 07",
+      title: "Séries · Temporadas & Progresso",
+      desc: "Organização por temporadas e episódios com marcação de concluídos, pula abertura e contagem automática do próximo episódio.",
       glow: "radial-gradient(circle, rgba(168,85,247,0.5) 0%, rgba(96,165,250,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/desenhos.webp",
-      badge: "TELA REAL 05 / 07",
-      title: "Animes & Desenhos",
-      desc: "Aba dedicada com filtro rápido para Desenhos e Animes — trazendo Black Clover, Attack on Titan, One Piece e muito mais em PT-BR.",
+      src: "assets/screens/desenhos.webp?v=4",
+      badge: "INTERFACE 05 / 07",
+      title: "Animes, Desenhos & Modo Infantil",
+      desc: "Aba dedicada para catálogos de animes e desenhos com filtro inteligente para áudio PT-BR e Perfil Infantil protegido por PIN.",
       glow: "radial-gradient(circle, rgba(52,211,153,0.48) 0%, rgba(56,189,248,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/fileiras.webp",
-      badge: "TELA REAL 06 / 07",
-      title: "Início · Novos Episódios & Lembretes",
-      desc: "Descendo na tela inicial: avisos de novos episódios das suas séries e alertas do que acabou de chegar.",
+      src: "assets/screens/fileiras.webp?v=4",
+      badge: "INTERFACE 06 / 07",
+      title: "Listas M3U & Guia de Programação (EPG)",
+      desc: "Reproduza suas listas de canais ao vivo com grade horária EPG das próximas 12h a 24h e troca instantânea.",
       glow: "radial-gradient(circle, rgba(96,165,250,0.5) 0%, rgba(255,181,71,0.28) 55%, transparent 80%)"
     },
     {
-      src: "assets/screens/detalhes.webp",
-      badge: "TELA REAL 07 / 07",
-      title: "Detalhes, Sinopse Traduzida & 1080p",
-      desc: "Sinopse traduzida para português do Brasil, nota, elenco, trailer e áudio duplo priorizado.",
+      src: "assets/screens/detalhes.webp?v=4",
+      badge: "INTERFACE 07 / 07",
+      title: "Detalhes em PT-BR, Perfis & Sincronia",
+      desc: "Sinopses traduzidas, ficha técnica, até 6 perfis independentes com PIN e sincronia de progresso entre TV, celular e Windows.",
       glow: "radial-gradient(circle, rgba(250,204,21,0.48) 0%, rgba(255,138,80,0.32) 55%, transparent 80%)"
     }
   ];
@@ -65,8 +65,8 @@
     android: {
       badge: "● Versão 2.0.1",
       size: "APK Universal · 47,8 MB",
-      title: "Lume TV para Celular & Tablet Android",
-      desc: "Baixe direto no celular ou aponte a câmera para o QR Code ao lado. Compatível com qualquer celular ou tablet Android.",
+      title: "Lume TV Player para Celular & Tablet Android",
+      desc: "Baixe o player direto no celular ou aponte a câmera para o QR Code ao lado. Compatível com qualquer celular ou tablet Android.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
       mainLabel: "Baixar Lume TV Android (.apk)",
       variants: [
@@ -78,18 +78,18 @@
       steps: [
         "Aponte a câmera do celular para o QR Code ou toque em <strong>Baixar Lume TV Android</strong>.",
         "Abra o arquivo <code>Lume-TV-Android.apk</code> e, se o Android pedir, permita <strong>Instalar apps desconhecidos</strong>.",
-        `Abra o Lume TV, entre usando o código <strong class="mono">${ACCESS_CODE}</strong> e aproveite.`
+        `Abra o player, ative com o código <strong class="mono">${ACCESS_CODE}</strong> e organize seus catálogos.`
       ],
       qr: "assets/qr/qr-android.svg",
       qrTitle: "Aponte a câmera do celular",
-      qrSub: "Baixa o instalador oficial do Android direto no telefone.",
+      qrSub: "Baixa o instalador oficial do player Android direto no telefone.",
       showQrSwitch: true
     },
     firestick: {
       badge: "● Versão 2.0.1",
       size: "APK 32 bits Leve · 25,1 MB",
-      title: "Lume TV para Amazon Fire TV Stick",
-      desc: "Compilação leve feita sob medida para rodar a 60 fps no Fire Stick sem travar nem ocupar espaço.",
+      title: "Lume TV Player para Amazon Fire TV Stick",
+      desc: "Compilação leve feita sob medida para o player rodar a 60 fps no Fire Stick sem travar nem ocupar espaço.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-FireStick.apk",
       mainLabel: "Baixar versão Fire Stick (.apk)",
       variants: [
@@ -101,7 +101,7 @@
       steps: [
         "Na loja da Amazon no Fire Stick, instale o app gratuito <strong>Downloader</strong>.",
         "Vá em <em>Configurações › Minha Fire TV › Opções do desenvolvedor</em> e permita instalar apps pelo Downloader.",
-        `Escaneie o QR Code ao lado ou baixe pelo navegador e entre com o código <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Escaneie o QR Code ao lado ou baixe pelo navegador e ative o player com o código <strong class="mono">${ACCESS_CODE}</strong>.`
       ],
       qr: "assets/qr/qr-firestick.svg",
       qrTitle: "QR Code · Fire TV Stick (25,1 MB)",
@@ -111,15 +111,15 @@
     androidtv: {
       badge: "● Versão 2.0.1",
       size: "APK Universal · 47,8 MB",
-      title: "Lume TV para Android TV & Google TV",
-      desc: "Interface feita para o controle remoto com destaques em tela cheia, troca rápida de canais e áudio dublado no topo.",
+      title: "Lume TV Player para Android TV & Google TV",
+      desc: "Interface feita para o controle remoto com navegação fluida, organização de catálogos, listas M3U e áudio PT-BR priorizado.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
       mainLabel: "Baixar para Android TV (.apk)",
       variants: [],
       steps: [
         "Na Play Store da sua TV, instale o app <strong>Downloader</strong> ou gerenciador de arquivos.",
         "Baixe o APK pelo botão ao lado ou envie do celular para a TV usando o QR Code.",
-        `Abra o Lume TV e entre com o código <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Abra o Lume TV Player e ative com o código <strong class="mono">${ACCESS_CODE}</strong>.`
       ],
       qr: "assets/qr/qr-android.svg",
       qrTitle: "QR Code · Android TV (47,8 MB)",
@@ -129,8 +129,8 @@
     windows: {
       badge: "● Versão 2.1.2",
       size: "Instalador Universal · 95,2 MB",
-      title: "Lume TV para Windows (7 ao 11)",
-      desc: "App nativo com player integrado. Roda liso no Windows 11, 10, 8 e até em PCs antigos com Windows 7 (inclusive sem SP1).",
+      title: "Lume TV Player para Windows (7 ao 11)",
+      desc: "App nativo com player acoplado. Roda liso no Windows 11, 10, 8 e até em PCs antigos com Windows 7 (inclusive sem SP1).",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.1.2/Instalar-Lume-TV-2.1.2.exe",
       mainLabel: "Baixar Instalador Windows (.exe)",
       variants: [
@@ -150,21 +150,21 @@
       ],
       qr: "assets/qr/qr-site.svg",
       qrTitle: "Abrir esta página no celular",
-      qrSub: "Compartilhe o link oficial do Lume TV com quem você quiser.",
+      qrSub: "Compartilhe o link oficial do Lume TV Player.",
       showQrSwitch: false
     },
     iphone: {
       badge: "● Versão 2.0.1",
       size: "Pacote iOS (.ipa) · 46,2 MB",
-      title: "Lume TV para iPhone (iOS)",
-      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), download de episódios para ver offline e envio direto para a TV.",
+      title: "Lume TV Player para iPhone (iOS)",
+      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), reprodução offline e envio direto de mídia para a TV.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-iPhone.ipa",
       mainLabel: "Baixar Lume TV iPhone (.ipa)",
       variants: [],
       steps: [
         "Baixe o arquivo oficial <code>Lume-TV-2.0.1-iPhone.ipa</code>.",
         "Importe o <code>.ipa</code> no seu instalador iOS (como <strong>LiveContainer</strong>, SideStore ou AltStore).",
-        `Abra o Lume TV no iPhone e entre com o código <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Abra o Lume TV no iPhone e ative com o código <strong class="mono">${ACCESS_CODE}</strong>.`
       ],
       qr: "assets/qr/qr-site.svg",
       qrTitle: "Abrir página oficial no iPhone",
@@ -216,7 +216,7 @@
           label.textContent = prev;
         }, 2000);
       }
-      showToast(`Código ${code} copiado! Use ao abrir o Lume TV.`);
+      showToast(`Código ${code} copiado! Use ao abrir o Lume TV Player.`);
     });
   });
 
@@ -249,7 +249,7 @@
     });
   });
 
-  // 7. Vitrine de Telas Reais + Lightbox
+  // 7. Vitrine da Interface + Lightbox
   let currentScreen = 0;
   const showcaseImg = document.getElementById("showcaseImg");
   const showcaseBadge = document.getElementById("showcaseBadge");
@@ -265,7 +265,7 @@
     const item = SCREENS[idx];
     if (showcaseImg) {
       showcaseImg.src = item.src;
-      showcaseImg.alt = `${item.title} — print real da interface do Lume TV`;
+      showcaseImg.alt = `${item.title} — interface do Lume TV Player`;
     }
     if (showcaseBadge) showcaseBadge.textContent = item.badge;
     if (showcaseTitle) showcaseTitle.textContent = item.title;
