@@ -5,7 +5,12 @@
 (() => {
   "use strict";
 
-  const ACCESS_CODE = "HJUZJ4";
+  let activeAccessCode = "HJUZJ4";
+  let activeDownloadPlatform = "android";
+
+  function withActiveCode(text) {
+    return String(text || "").replace(/HJUZJ4/g, activeAccessCode);
+  }
 
   // 1. Dados da Central de Downloads (links exatos oficiais)
   const DOWNLOADS = {
@@ -25,7 +30,7 @@
       steps: [
         "Aponte a câmera do celular para o QR Code ou toque em <strong>Baixar Lume TV Android</strong>.",
         "Abra o arquivo <code>Lume-TV-Android.apk</code> e, se o Android pedir, permita <strong>Instalar apps desconhecidos</strong>.",
-        `Abra o player, ative com o código <strong class="mono">${ACCESS_CODE}</strong> e organize seus conteúdos.`
+        `Abra o player, ative com o código <strong class="mono">HJUZJ4</strong> e organize seus conteúdos.`
       ],
       qr: "assets/qr/qr-android.svg",
       qrTitle: "Aponte a câmera do celular",
@@ -48,7 +53,7 @@
       steps: [
         "Na loja da Amazon no Fire Stick, instale o app gratuito <strong>Downloader</strong>.",
         "Vá em <em>Configurações › Minha Fire TV › Opções do desenvolvedor</em> e permita instalar apps pelo Downloader.",
-        `Abra <strong>lume-tv-be0.pages.dev</strong> no Downloader ou use o QR Code ao lado e ative com <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Abra <strong>lume-tv-be0.pages.dev</strong> no Downloader ou use o QR Code ao lado e ative com <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-firestick.svg",
       qrTitle: "QR Code · Fire TV Stick (25,1 MB)",
@@ -66,7 +71,7 @@
       steps: [
         "Na Play Store da sua TV, instale o app <strong>Downloader</strong> ou <strong>Send Files to TV</strong>.",
         "Baixe o APK pelo link oficial ou envie do celular para a TV usando o QR Code.",
-        `Abra o Lume TV Player e ative com o código <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Abra o Lume TV Player e ative com o código <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-android.svg",
       qrTitle: "QR Code · Android TV (47,8 MB)",
@@ -93,7 +98,7 @@
       steps: [
         "Baixe e execute o arquivo <code>Instalar-Lume-TV-2.1.2.exe</code>.",
         "Se aparecer a tela azul do SmartScreen, clique em <strong>Mais informações → Executar assim mesmo</strong>.",
-        `Abra o Lume TV pela Área de Trabalho e digite o código <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Abra o Lume TV pela Área de Trabalho e digite o código <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-site.svg",
       qrTitle: "Abrir lume-tv-be0.pages.dev",
@@ -111,7 +116,7 @@
       steps: [
         "Baixe o arquivo oficial <code>Lume-TV-2.0.1-iPhone.ipa</code> pelo Safari e salve em <strong>Arquivos</strong>.",
         "Instale via <strong>SideStore + LocalDevVPN</strong> ou dentro do <strong>LiveContainer</strong> (veja o guia ilustrado abaixo).",
-        `Abra o Lume TV no iPhone e ative com o código <strong class="mono">${ACCESS_CODE}</strong>.`
+        `Abra o Lume TV no iPhone e ative com o código <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-site.svg",
       qrTitle: "Abrir página oficial no iPhone",
@@ -782,10 +787,10 @@
     }, 2600);
   }
 
-  // 4. Copiar código HJUZJ4 em qualquer botão
+  // 4. Copiar código de acesso em qualquer botão
   document.querySelectorAll(".copy-code-btn").forEach((btn) => {
     btn.addEventListener("click", async () => {
-      const code = btn.dataset.code || ACCESS_CODE;
+      const code = btn.dataset.code || activeAccessCode;
       try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           await navigator.clipboard.writeText(code);
@@ -804,10 +809,13 @@
       }
       const label = btn.querySelector(".copy-label");
       if (label) {
-        const prev = label.textContent;
+        const prevHtml = label.innerHTML;
         label.textContent = "Copiado ✓";
         setTimeout(() => {
-          label.textContent = prev;
+          label.innerHTML = prevHtml.replace(/[A-Z0-9]{4,16}/g, (m) => (m === prevHtml ? activeAccessCode : m));
+          label.querySelectorAll("[data-access-code]").forEach((el) => {
+            el.textContent = activeAccessCode;
+          });
         }, 2000);
       }
       showToast(`Código ${code} copiado! Use ao abrir o Lume TV Player.`);
@@ -872,6 +880,7 @@
   function selectPlatform(key) {
     const data = DOWNLOADS[key];
     if (!data) return;
+    activeDownloadPlatform = key;
     document.querySelectorAll(".dl-tab").forEach((t) => {
       const active = t.dataset.platform === key;
       t.classList.toggle("is-active", active);
@@ -899,7 +908,7 @@
     }
 
     if (dlSteps) {
-      dlSteps.innerHTML = data.steps.map((s) => `<li>${s}</li>`).join("");
+      dlSteps.innerHTML = data.steps.map((s) => `<li>${withActiveCode(s)}</li>`).join("");
     }
 
     if (dlQrImg) dlQrImg.src = data.qr;
@@ -957,13 +966,13 @@
     return `
       <div class="ui-mock ${mock.smartscreen ? "mock-smartscreen" : ""}" aria-hidden="true">
         <div class="mock-head">
-          <span>${mock.head}</span>
+          <span>${withActiveCode(mock.head)}</span>
           <span class="mock-dots"><i></i><i></i><i></i></span>
         </div>
         <div class="mock-body">
-          ${rowsHtml}
-          ${actionsHtml}
-          ${hintHtml}
+          ${withActiveCode(rowsHtml)}
+          ${withActiveCode(actionsHtml)}
+          ${withActiveCode(hintHtml)}
         </div>
       </div>
     `;
@@ -1003,8 +1012,8 @@
           <article class="guide-step-card">
             <div>
               <span class="guide-step-num">PASSO 0${i + 1}</span>
-              <h4>${step.title}</h4>
-              <p>${step.desc}</p>
+              <h4>${withActiveCode(step.title)}</h4>
+              <p>${withActiveCode(step.desc)}</p>
             </div>
             ${buildMockHtml(step.mock)}
           </article>
@@ -1061,7 +1070,75 @@
 
   renderGuide("android", "sidestore");
 
-  // 9. Spotlight especular nos cards Bento e áreas do player
+  // 8.5 Sincronização automática do código com o painel (/api/codigo)
+  function applyAccessCode(newCode) {
+    const clean = String(newCode || "").trim().toUpperCase();
+    if (!/^[A-Z0-9]{4,16}$/.test(clean) || clean === activeAccessCode) return;
+    activeAccessCode = clean;
+
+    document.querySelectorAll("[data-access-code]").forEach((el) => {
+      el.textContent = clean;
+    });
+    document.querySelectorAll(".copy-code-btn").forEach((btn) => {
+      btn.dataset.code = clean;
+      if (btn.getAttribute("aria-label")) {
+        btn.setAttribute("aria-label", `Copiar código de ativação ${clean}`);
+      }
+    });
+
+    selectPlatform(activeDownloadPlatform);
+    renderGuide(currentGuidePlatform, currentIosMethod);
+  }
+
+  (async () => {
+    try {
+      const res = await fetch("/api/codigo", { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && data.code) applyAccessCode(data.code);
+    } catch (_) {
+      // Mantém o código padrão em caso de ambiente offline ou local sem Function
+    }
+  })();
+
+  // 9. Brilho reativo no Hero (Notebook + iPhone) ao mover e aproximar do centro dos ícones Play
+  const heroStage = document.querySelector(".hero-stage");
+  const heroDeviceRender = document.querySelector(".hero-device-render");
+  const reducedMotionQuery = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (heroStage && heroDeviceRender && !(reducedMotionQuery && reducedMotionQuery.matches)) {
+    const updateHeroGlow = (e) => {
+      const rect = heroDeviceRender.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const nx = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      const ny = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+
+      // Centros relativos do botão Play no notebook (52%, 47%) e no iPhone (77%, 58%)
+      const dNotebook = Math.hypot((nx - 0.52) * 1.15, ny - 0.47);
+      const dIphone = Math.hypot((nx - 0.77) * 1.15, ny - 0.58);
+      const d = Math.min(dNotebook, dIphone);
+      const prox = Math.pow(Math.max(0, 1 - d / 0.32), 1.6);
+
+      heroStage.classList.add("is-hovering");
+      heroStage.style.setProperty("--hx", `${(nx * 100).toFixed(2)}%`);
+      heroStage.style.setProperty("--hy", `${(ny * 100).toFixed(2)}%`);
+      heroStage.style.setProperty("--hover", "1");
+      heroStage.style.setProperty("--prox", prox.toFixed(3));
+    };
+
+    const resetHeroGlow = () => {
+      heroStage.classList.remove("is-hovering");
+      heroStage.style.setProperty("--hx", "52%");
+      heroStage.style.setProperty("--hy", "47%");
+      heroStage.style.setProperty("--hover", "0");
+      heroStage.style.setProperty("--prox", "0");
+    };
+
+    heroDeviceRender.addEventListener("pointerenter", updateHeroGlow);
+    heroDeviceRender.addEventListener("pointermove", updateHeroGlow);
+    heroDeviceRender.addEventListener("pointerleave", resetHeroGlow);
+  }
+
+  // 9.1 Spotlight especular nos cards Bento e áreas do player
   document.querySelectorAll(".spotlight-card").forEach((card) => {
     card.addEventListener("pointermove", (e) => {
       const rect = card.getBoundingClientRect();

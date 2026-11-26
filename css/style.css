@@ -604,6 +604,10 @@ a:focus-visible {
 /* Palco TV Hero */
 .hero-stage {
   position: relative;
+  --hx: 52%;
+  --hy: 47%;
+  --hover: 0;
+  --prox: 0;
 }
 
 .stage-ambilight {
@@ -611,9 +615,10 @@ a:focus-visible {
   inset: -14% -8%;
   border-radius: 50%;
   filter: blur(75px);
-  opacity: 0.45;
-  background: radial-gradient(circle at 50% 45%, rgba(255, 181, 71, 0.65), rgba(255, 107, 107, 0.4) 55%, transparent 75%);
-  transition: background 0.55s var(--ease);
+  opacity: calc(0.44 + var(--hover) * 0.14 + var(--prox) * 0.24);
+  background:
+    radial-gradient(circle at var(--hx) var(--hy), rgba(255, 181, 71, 0.72), rgba(255, 107, 107, 0.42) 48%, transparent 74%);
+  transition: opacity 0.35s var(--ease);
   pointer-events: none;
   z-index: 0;
 }
@@ -734,7 +739,14 @@ a:focus-visible {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: #07080B;
-  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.78);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.78),
+    0 0 60px rgba(255, 181, 71, calc(0.06 + var(--prox) * 0.18));
+  transition: border-color 0.3s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.hero-stage.is-hovering .hero-device-render {
+  border-color: rgba(255, 181, 71, calc(0.24 + var(--prox) * 0.24));
 }
 
 .hero-device-render img {
@@ -743,12 +755,31 @@ a:focus-visible {
   height: auto;
 }
 
+.hero-device-render::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      280px circle at var(--hx) var(--hy),
+      rgba(255, 188, 92, calc(0.14 + var(--prox) * 0.22)),
+      rgba(255, 107, 107, calc(0.05 + var(--prox) * 0.12)) 42%,
+      transparent 74%
+    );
+  mix-blend-mode: screen;
+  opacity: var(--hover);
+  transition: opacity 0.32s var(--ease);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .hero-device-render::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(125deg, rgba(255, 255, 255, 0.06) 0%, transparent 36%);
   pointer-events: none;
+  z-index: 3;
 }
 
 .tv-glare {
