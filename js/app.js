@@ -51,9 +51,9 @@
         }
       ],
       steps: [
-        "Na loja da Amazon no Fire Stick, instale o app gratuito <strong>Downloader</strong>.",
-        "Vá em <em>Configurações › Minha Fire TV › Opções do desenvolvedor</em> e permita instalar apps pelo Downloader.",
-        `Abra <strong>lume-tv-be0.pages.dev</strong> no Downloader ou use o QR Code ao lado e ative com <strong class="mono">HJUZJ4</strong>.`
+        "Na loja da Amazon no Fire Stick, instale o app gratuito <strong>Downloader</strong> e libere <em>Instalar apps desconhecidos</em> para ele.",
+        "<strong>Não precisa de código numérico:</strong> na caixinha da tela inicial do Downloader, digite <code>lume-tv-be0.pages.dev/fire.apk</code> e aperte <strong>Go</strong>.",
+        `Instale o aplicativo, apague o <code>.apk</code> ao finalizar e ative com o código <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-firestick.svg",
       qrTitle: "QR Code · Fire TV Stick (25,9 MB)",
@@ -69,8 +69,8 @@
       mainLabel: "Baixar para Android TV (.apk)",
       variants: [],
       steps: [
-        "Na Play Store da sua TV, instale o app <strong>Downloader</strong> ou <strong>Send Files to TV</strong>.",
-        "Baixe o APK pelo link oficial ou envie do celular para a TV usando o QR Code.",
+        "Na Play Store da TV, instale o <strong>Downloader</strong> (ou <strong>Send Files to TV</strong>) e permita instalar apps desconhecidos.",
+        "<strong>Sem código numérico:</strong> na caixa do Downloader, digite <code>lume-tv-be0.pages.dev/tv.apk</code> e aperte <strong>Go</strong> (ou envie pelo celular).",
         `Abra o Lume TV Player e ative com o código <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-android.svg",
@@ -527,7 +527,7 @@
     },
 
     firestick: {
-      summary: "<strong>Amazon Fire TV Stick:</strong> use sempre o arquivo especial <strong>Fire Stick (32-bit · 25,9 MB)</strong> — compatível até com Fire Stick mais antigo (API 25+). Todo o processo é feito direto pelo controle remoto.",
+      summary: "<strong>Amazon Fire TV Stick:</strong> não precisa de código numérico no <strong>Downloader</strong> — basta digitar <code>lume-tv-be0.pages.dev/fire.apk</code> na tela inicial dele e apertar <strong>Go</strong> para baixar sempre a última versão leve.",
       steps: [
         {
           title: "1. Libere as Opções para Desenvolvedores",
@@ -553,17 +553,17 @@
           }
         },
         {
-          title: "3. Baixe o Lume TV pelo Downloader",
-          desc: "Abra o <strong>Downloader</strong>, toque na barra de endereço, digite <code>lume-tv-be0.pages.dev</code> e aperte <strong>Go</strong>. Role até a aba <strong>Fire TV Stick</strong> e clique em <strong>Baixar versão Fire Stick (.apk)</strong>.",
+          title: "3. Baixe direto no Downloader (sem precisar de código)",
+          desc: "Abra o <strong>Downloader</strong>, clique na caixinha branca (<em>Enter a URL or Search Term</em>), digite <code>lume-tv-be0.pages.dev/fire.apk</code> e aperte <strong>Go</strong>. <strong>Não precisa de código numérico</strong> — o download começa sozinho na última versão!",
           mock: {
-            head: "Downloader · Navegador",
+            head: "Downloader · Tela Inicial",
             rows: [
-              { label: "https://lume-tv-be0.pages.dev", target: true }
+              { label: "lume-tv-be0.pages.dev/fire.apk", target: true }
             ],
             actions: [
               { label: "Go", type: "target" }
             ],
-            hint: "Ou use o link direto do APK na barra do Downloader."
+            hint: "Digite exatamente esse endereço no lugar do código e aperte Go."
           }
         },
         {
@@ -584,6 +584,18 @@
       ],
       errorsTitle: "Erros mais comuns no Amazon Fire TV Stick",
       errors: [
+        {
+          tag: "CÓDIGO DOWNLOADER",
+          q: "Tem código numérico para colocar no Downloader? Como baixar por ele?",
+          intro: "Você NÃO precisa de código numérico — no Downloader basta digitar o endereço curto oficial na mesma caixinha.",
+          steps: [
+            "Na loja da Amazon, baixe o app gratuito <strong>Downloader</strong> (ícone laranja) e ative <em>Configurações → Minha Fire TV → Opções para desenvolvedores → Instalar apps desconhecidos → Downloader (ATIVADO)</em>.",
+            "Abra o <strong>Downloader</strong> na aba <strong>Home</strong> e selecione o campo branco <em>Enter a URL or Search Term</em>.",
+            "No teclado na tela, digite exatamente: <code>lume-tv-be0.pages.dev/fire.apk</code> (não precisa pôr <code>https://</code>).",
+            "Desça até o botão laranja <strong>Go</strong> e aperte <strong>OK</strong> — o download da versão mais recente começa automaticamente, sem depender de código que expira.",
+            "Ao terminar, clique em <strong>Instalar → Concluído → Delete → Delete</strong> para limpar o instalador e entre no Lume TV com o código <strong class=\"mono\">HJUZJ4</strong>."
+          ]
+        },
         {
           tag: "OCULTO",
           q: "Não encontro “Opções para desenvolvedores” em Minha Fire TV",
@@ -699,18 +711,18 @@
           }
         },
         {
-          title: "2. Envie ou baixe o APK na TV",
-          desc: "Pelo <strong>Send Files to TV</strong>: abra <em>Receive</em> na TV e envie o APK que você baixou no celular. Pelo <strong>Downloader</strong>: digite <code>lume-tv-be0.pages.dev</code> e baixe direto na TV.",
+          title: "2. Baixe no Downloader (sem código) ou envie pelo celular",
+          desc: "No <strong>Downloader</strong>: na caixa da tela inicial digite <code>lume-tv-be0.pages.dev/tv.apk</code> e aperte <strong>Go</strong> (não precisa de código numérico). Ou pelo <strong>Send Files to TV</strong>: abra <em>Receive</em> na TV e envie o APK do celular.",
           mock: {
-            head: "Send Files to TV",
+            head: "Downloader · ou Send Files",
             rows: [
-              { label: "Lume-TV-Android.apk (49,2 MB) — Recebido" }
+              { label: "lume-tv-be0.pages.dev/tv.apk (Downloader)", target: true }
             ],
             actions: [
-              { label: "Send (Celular)", type: "link" },
-              { label: "Receive (TV)", type: "target" }
+              { label: "Go (Downloader)", type: "target" },
+              { label: "Receive (Send Files)", type: "link" }
             ],
-            hint: "Celular e TV precisam estar no mesmo Wi-Fi."
+            hint: "Escolha o jeito que preferir na sua TV."
           }
         },
         {
@@ -738,6 +750,17 @@
       ],
       errorsTitle: "Erros mais comuns em Android TV / Google TV / TV Box",
       errors: [
+        {
+          tag: "CÓDIGO DOWNLOADER",
+          q: "Tem código no Downloader para Android TV / Google TV?",
+          intro: "Não precisa de código numérico! A mesma caixinha do Downloader aceita o link curto direto da TV.",
+          steps: [
+            "Baixe o app gratuito <strong>Downloader by AFTVnews</strong> na Google Play Store da sua TV.",
+            "Na tela inicial (Home) do Downloader, clique no campo de texto e digite: <code>lume-tv-be0.pages.dev/tv.apk</code>.",
+            "Aperte <strong>Go</strong> com o controle remoto — ele já baixa a versão mais nova do Lume TV Android sem precisar caçar arquivo no site.",
+            "Quando pedir permissão de segurança, libere <em>Fontes desconhecidas</em> para o Downloader, clique em <strong>Instalar → Concluído</strong> e ative com <strong class=\"mono\">HJUZJ4</strong>."
+          ]
+        },
         {
           tag: "PERMISSÃO",
           q: "Google TV / TCL bloqueia a instalação e não abre a tela de permissão",
