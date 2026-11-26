@@ -15,10 +15,11 @@
   <link rel="apple-touch-icon" href="assets/icon-lume.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <!-- Fundo cinematográfico Cinema Prism -->
   <div class="cinema-backdrop" aria-hidden="true">
     <canvas id="prismCanvas"></canvas>
@@ -82,11 +83,11 @@
         <div class="hero-copy">
           <div class="eyebrow">
             <span class="eyebrow-dot" aria-hidden="true"></span>
-            <span class="mono">PLAYER DE VÍDEO · v2.0.1 ANDROID, FIRE STICK &amp; iOS · v2.1.2 WINDOWS</span>
+            <span class="mono">PLAYER DE VÍDEO · v<span data-mobile-version>2.1.0</span> ANDROID, FIRE STICK &amp; iOS · v<span data-windows-version>2.2.0</span> WINDOWS</span>
           </div>
 
           <h1 class="hero-title">
-            Seu player de vídeo.<br>
+            Seu <span class="hero-player-word">player</span> de vídeo.<br>
             Seus conteúdos.<br>
             <em class="serif-accent">Um só cinema.</em>
           </h1>
@@ -176,6 +177,38 @@
           <strong class="metric-value mono" data-access-code>HJUZJ4</strong>
           <span>código de ativação</span>
         </div>
+      </div>
+
+      <!-- Destaques da Nova Versão -->
+      <div class="container whatsnew-strip reveal">
+        <article class="glass-card whatsnew-card spotlight-card">
+          <span class="whatsnew-badge mono">PT</span>
+          <div class="whatsnew-copy">
+            <strong>Capas e títulos em português</strong>
+            <span>Catálogo inteiro traduzido por padrão para PT-BR (ajustável nas configurações).</span>
+          </div>
+        </article>
+        <article class="glass-card whatsnew-card spotlight-card">
+          <span class="whatsnew-badge mono">10</span>
+          <div class="whatsnew-copy">
+            <strong>Top 10 filmes da semana</strong>
+            <span>Fileira horizontal com os filmes mais assistidos nos streamings.</span>
+          </div>
+        </article>
+        <article class="glass-card whatsnew-card spotlight-card">
+          <span class="whatsnew-badge mono">▶</span>
+          <div class="whatsnew-copy">
+            <strong>YouTube na barra superior</strong>
+            <span>Acesso rápido sem anúncios logo no topo do player (oculto no Kids).</span>
+          </div>
+        </article>
+        <article class="glass-card whatsnew-card spotlight-card">
+          <span class="whatsnew-badge mono">♪</span>
+          <div class="whatsnew-copy">
+            <strong>Áudio FFmpeg &amp; retomada exata</strong>
+            <span>Proteção anti-mudo ao iniciar e atualização Windows limpa sobre versões antigas.</span>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -363,8 +396,8 @@
                 <div class="yt-perk">
                   <span class="perk-check">✓</span>
                   <div>
-                    <strong>Nativo no menu do seu perfil</strong>
-                    <span>Já vem integrado ao player ao ativar com o código <span class="mono" data-access-code>HJUZJ4</span>.</span>
+                    <strong>Direto na barra superior</strong>
+                    <span>Visível logo no menu principal ao ativar com o código <span class="mono" data-access-code>HJUZJ4</span>.</span>
                   </div>
                 </div>
                 <div class="yt-perk">
@@ -402,19 +435,20 @@
                 <div class="mini-ui-bar">
                   <span class="mini-logo">Lume<strong>TV</strong></span>
                   <div class="mini-ui-right">
-                    <span class="mini-pill" id="miniUiSearch">Buscar</span>
-                    <span class="mini-pill mini-pill-highlight" id="miniUiTrigger">••• Perfil</span>
+                    <span class="mini-pill">Início</span>
+                    <span class="mini-pill">Filmes</span>
+                    <span class="mini-pill mini-pill-highlight" id="miniUiTrigger">▶ YouTube</span>
                   </div>
                 </div>
                 <div class="mini-ui-menu">
-                  <div class="mini-menu-item">Minha Conta</div>
-                  <div class="mini-menu-item">Trocar de Perfil</div>
                   <div class="mini-menu-item mini-menu-yt">
                     <span class="mini-yt-dot"></span>
-                    <span>YouTube</span>
-                    <span class="mini-yt-tag">SEM INTERRUPÇÕES</span>
+                    <span>YouTube Integrado</span>
+                    <span class="mini-yt-tag">NA BARRA SUPERIOR</span>
                   </div>
-                  <div class="mini-menu-item">Ajustes</div>
+                  <div class="mini-menu-item">Busca completa sem anúncios</div>
+                  <div class="mini-menu-item">Músicas, podcasts e aulas</div>
+                  <div class="mini-menu-item">Oculto no Perfil Infantil</div>
                 </div>
               </div>
 
@@ -429,8 +463,8 @@
                 <li>
                   <span class="step-num mono">2</span>
                   <div>
-                    <strong id="ytStep2Title">Toque nos três pontinhos (•••)</strong>
-                    <p id="ytStep2Desc">No celular Android e no iPhone, eles ficam lá no topo, bem ao lado da lupa de busca.</p>
+                    <strong id="ytStep2Title">Olhe a barra superior no topo</strong>
+                    <p id="ytStep2Desc">No celular Android e no iPhone, o botão <strong>YouTube</strong> fica logo ao lado de Minha lista.</p>
                   </div>
                 </li>
                 <li>
@@ -618,43 +652,43 @@
         <div class="devices-grid reveal">
           <article class="glass-card device-card">
             <div class="device-top">
-              <span class="status-pill status-live">● Disponível · v2.0.1</span>
+              <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">APK</span>
             </div>
             <h3>Celular &amp; Tablet Android</h3>
-            <p>Toque duplo ±15s, envio direto para o player da TV e acesso rápido ao Player YouTube integrado pelos três pontinhos.</p>
+            <p>Toque duplo ±15s, envio direto para o player da TV e acesso rápido ao YouTube sem anúncios direto na barra superior.</p>
           </article>
 
           <article class="glass-card device-card">
             <div class="device-top">
-              <span class="status-pill status-live">● Disponível · v2.0.1</span>
+              <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">TV</span>
             </div>
             <h3>Android TV &amp; Google TV</h3>
-            <p>Navegação 100% pelo controle remoto para organizar seus filmes, séries e listas em tela cheia na sua Smart TV ou TV Box.</p>
+            <p>Navegação 100% pelo controle remoto com Top 10 da semana, capas em PT-BR e suporte a áudio FFmpeg.</p>
           </article>
 
           <article class="glass-card device-card">
             <div class="device-top">
-              <span class="status-pill status-live">● Disponível · v2.0.1</span>
+              <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">32-bit</span>
             </div>
             <h3>Amazon Fire TV Stick</h3>
-            <p>Versão ultraleve otimizada para o Fire Stick rodar seus vídeos a 60 fps com consumo mínimo de memória.</p>
+            <p>Versão leve compatível também com Fire Stick antigo (API 25+), rodando liso a 60 fps com consumo mínimo de memória.</p>
           </article>
 
           <article class="glass-card device-card">
             <div class="device-top">
-              <span class="status-pill status-live">● Disponível · v2.1.2</span>
+              <span class="status-pill status-live">● Disponível · v<span data-windows-version>2.2.0</span></span>
               <span class="mono device-arch">Win7–11</span>
             </div>
             <h3>Windows (do 7 ao 11)</h3>
-            <p>Janela nativa com player acoplado e instalador em 1 clique — compatível até com Windows 7 antigo (32 e 64 bits).</p>
+            <p>Janela nativa com player acoplado e instalador em 1 clique — atualiza sobre versões antigas sem erros (32 e 64 bits).</p>
           </article>
 
           <article class="glass-card device-card">
             <div class="device-top">
-              <span class="status-pill status-live">● Disponível · v2.0.1</span>
+              <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">iOS</span>
             </div>
             <h3>iPhone (iOS)</h3>
@@ -767,8 +801,9 @@
             <div class="dl-body">
               <div class="dl-info">
                 <div class="dl-meta">
-                  <span class="status-pill status-live" id="dlBadge">● Versão 2.0.1</span>
-                  <span class="mono dl-size" id="dlSize">APK Universal · 47,8 MB</span>
+                  <span class="status-pill status-live" id="dlBadge">● Versão 2.1.0</span>
+                  <span class="mono dl-size" id="dlSize">APK Universal · 49,2 MB</span>
+                  <span class="dl-sync-pill" id="dlSyncPill">↻ Sincronizado com GitHub</span>
                 </div>
 
                 <h3 id="dlTitle">Lume TV Player para Celular &amp; Tablet Android</h3>
@@ -819,9 +854,9 @@
                 <strong class="qr-title" id="dlQrTitle">Aponte a câmera do celular</strong>
                 <p class="qr-sub" id="dlQrSub">Baixa o instalador oficial do player Android direto no telefone.</p>
                 <div class="qr-switch" id="qrSwitch">
-                  <button type="button" class="qr-pill is-active" data-qr="assets/qr/qr-android.svg" data-qr-title="Android Universal (47,8 MB)" data-qr-sub="Funciona em qualquer celular ou tablet Android.">Universal</button>
-                  <button type="button" class="qr-pill" data-qr="assets/qr/qr-arm64.svg" data-qr-title="Android ARM64 Leve (24,6 MB)" data-qr-sub="Metade do tamanho para celulares mais novos.">ARM64 Leve</button>
-                  <button type="button" class="qr-pill" data-qr="assets/qr/qr-firestick.svg" data-qr-title="Fire TV Stick (25,1 MB)" data-qr-sub="Versão leve 32 bits para Fire Stick.">Fire Stick</button>
+                  <button type="button" class="qr-pill is-active" data-qr="assets/qr/qr-android.svg" data-qr-title="Android Universal (49,2 MB)" data-qr-sub="Funciona em qualquer celular, TV Box ou Fire Stick.">Universal</button>
+                  <button type="button" class="qr-pill" data-qr="assets/qr/qr-arm64.svg" data-qr-title="Android ARM64 Leve (25,3 MB)" data-qr-sub="Metade do tamanho para celulares mais novos.">ARM64 Leve</button>
+                  <button type="button" class="qr-pill" data-qr="assets/qr/qr-firestick.svg" data-qr-title="Fire TV Stick (25,9 MB)" data-qr-sub="Versão leve 32 bits para Fire Stick (API 25+).">Fire Stick</button>
                 </div>
               </div>
             </div>
@@ -917,7 +952,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" hidden>
-              <p>O Lume TV traz um módulo de reprodução do YouTube sem interrupções integrado à própria interface do player. Basta abrir o menu do seu perfil (nos três pontinhos <strong>•••</strong> no celular/iPhone ou descendo até o seu perfil no menu lateral da TV) e tocar em <strong>YouTube</strong>. Ele fica oculto automaticamente no Perfil Infantil.</p>
+              <p>O Lume TV traz um módulo de reprodução do YouTube sem anúncios integrado diretamente na <strong>barra superior</strong> do player. Basta clicar ou tocar em <strong>YouTube</strong> no topo da tela (Android, Fire Stick, iPhone ou Windows). Ele fica oculto automaticamente no Perfil Infantil.</p>
             </div>
           </div>
 
@@ -947,7 +982,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" hidden>
-              <p>Sim! A versão <code>2.1.2</code> do Lume TV Player para Windows foi feita sob medida para rodar desde o <strong>Windows 7 (mesmo sem SP1, em 32 ou 64 bits)</strong> até o <strong>Windows 11</strong>, já com tudo necessário empacotado no instalador em 1 clique.</p>
+              <p>Sim! A versão <code data-windows-version>2.2.0</code> do Lume TV Player para Windows foi feita sob medida para rodar desde o <strong>Windows 7 (mesmo sem SP1, em 32 ou 64 bits)</strong> até o <strong>Windows 11</strong>, atualizando por cima de versões antigas sem erros e já com tudo empacotado em 1 clique.</p>
             </div>
           </div>
         </div>
@@ -994,7 +1029,7 @@
         <img src="assets/icon-lume.webp" alt="" width="28" height="28">
         <div>
           <strong>Lume TV Player</strong>
-          <span>v2.0.1 Android, Fire Stick &amp; iPhone · v2.1.2 Windows</span>
+          <span>v<span data-mobile-version>2.1.0</span> Android, Fire Stick &amp; iPhone · v<span data-windows-version>2.2.0</span> Windows</span>
         </div>
       </div>
 

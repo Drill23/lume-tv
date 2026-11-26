@@ -12,19 +12,19 @@
     return String(text || "").replace(/HJUZJ4/g, activeAccessCode);
   }
 
-  // 1. Dados da Central de Downloads (links exatos oficiais)
+  // 1. Dados da Central de Downloads (links oficiais + sincronizados automaticamente com GitHub)
   const DOWNLOADS = {
     android: {
-      badge: "● Versão 2.0.1",
-      size: "APK Universal · 47,8 MB",
+      badge: "● Versão 2.1.0",
+      size: "APK Universal · 49,2 MB",
       title: "Lume TV Player para Celular & Tablet Android",
-      desc: "Baixe o player direto no celular ou aponte a câmera para o QR Code ao lado. Compatível com qualquer celular ou tablet Android.",
+      desc: "Baixe o player direto no celular ou aponte a câmera para o QR Code ao lado. Compatível com qualquer celular, tablet Android ou Fire Stick (API 25+).",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
       mainLabel: "Baixar Lume TV Android (.apk)",
       variants: [
         {
-          label: "ARM64 Leve (24,6 MB)",
-          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-ARM64.apk"
+          label: "ARM64 Leve (25,3 MB)",
+          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-ARM64.apk"
         }
       ],
       steps: [
@@ -38,15 +38,15 @@
       showQrSwitch: true
     },
     firestick: {
-      badge: "● Versão 2.0.1",
-      size: "APK 32 bits Leve · 25,1 MB",
+      badge: "● Versão 2.1.0",
+      size: "APK 32 bits Leve · 25,9 MB",
       title: "Lume TV Player para Amazon Fire TV Stick",
-      desc: "Compilação leve feita sob medida para o player reproduzir seus vídeos a 60 fps no Fire Stick sem travar nem ocupar espaço.",
-      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-FireStick.apk",
+      desc: "Compilação leve compatível até com Fire Stick mais antigo (API 25+), rodando seus vídeos em PT-BR com fluidez e áudio FFmpeg.",
+      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-FireStick.apk",
       mainLabel: "Baixar versão Fire Stick (.apk)",
       variants: [
         {
-          label: "Universal 47,8 MB",
+          label: "Universal (49,2 MB)",
           url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk"
         }
       ],
@@ -56,15 +56,15 @@
         `Abra <strong>lume-tv-be0.pages.dev</strong> no Downloader ou use o QR Code ao lado e ative com <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-firestick.svg",
-      qrTitle: "QR Code · Fire TV Stick (25,1 MB)",
-      qrSub: "Link direto da versão leve 32 bits para Fire Stick.",
+      qrTitle: "QR Code · Fire TV Stick (25,9 MB)",
+      qrSub: "Link direto da versão leve 32 bits para Fire Stick (API 25+).",
       showQrSwitch: false
     },
     androidtv: {
-      badge: "● Versão 2.0.1",
-      size: "APK Universal · 47,8 MB",
+      badge: "● Versão 2.1.0",
+      size: "APK Universal · 49,2 MB",
       title: "Lume TV Player para Android TV & Google TV",
-      desc: "Interface feita para o controle remoto para você organizar seus filmes, séries e suas listas M3U com áudio PT-BR priorizado.",
+      desc: "Interface feita para o controle remoto com Top 10 da semana, capas em PT-BR, YouTube na barra superior e áudio FFmpeg.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
       mainLabel: "Baixar para Android TV (.apk)",
       variants: [],
@@ -74,29 +74,29 @@
         `Abra o Lume TV Player e ative com o código <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-android.svg",
-      qrTitle: "QR Code · Android TV (47,8 MB)",
+      qrTitle: "QR Code · Android TV (49,2 MB)",
       qrSub: "Escaneie no celular para baixar e enviar para sua TV.",
       showQrSwitch: false
     },
     windows: {
-      badge: "● Versão 2.1.2",
+      badge: "● Versão 2.2.0",
       size: "Instalador Universal · 95,2 MB",
       title: "Lume TV Player para Windows (7 ao 11)",
-      desc: "App nativo com player acoplado. Roda liso no Windows 11, 10, 8 e até em PCs antigos com Windows 7 (inclusive sem SP1).",
-      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.1.2/Instalar-Lume-TV-2.1.2.exe",
+      desc: "App nativo com player acoplado. Roda liso no Windows 11, 10, 8 e até em PCs antigos com Windows 7 (inclusive sem SP1) e atualiza por cima sem erro.",
+      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.2.0/Instalar-Lume-TV-2.2.0.exe",
       mainLabel: "Baixar Instalador Windows (.exe)",
       variants: [
         {
-          label: "Portátil x64 (63,8 MB)",
-          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.1.2/LumeTV-2.1.2-Win64.zip"
+          label: "Portátil x64 (63,9 MB)",
+          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.2.0/LumeTV-2.2.0-Win64.zip"
         },
         {
           label: "Portátil Win7 32-bit (59,8 MB)",
-          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.1.2/LumeTV-2.1.2-Win7-x86.zip"
+          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/windows-v2.2.0/LumeTV-2.2.0-Win7-x86.zip"
         }
       ],
       steps: [
-        "Baixe e execute o arquivo <code>Instalar-Lume-TV-2.1.2.exe</code>.",
+        "Baixe e execute o arquivo <code>Instalar-Lume-TV-2.2.0.exe</code>.",
         "Se aparecer a tela azul do SmartScreen, clique em <strong>Mais informações → Executar assim mesmo</strong>.",
         `Abra o Lume TV pela Área de Trabalho e digite o código <strong class="mono">HJUZJ4</strong>.`
       ],
@@ -106,15 +106,15 @@
       showQrSwitch: false
     },
     iphone: {
-      badge: "● Versão 2.0.1",
-      size: "Pacote iOS (.ipa) · 46,2 MB",
+      badge: "● Versão 2.1.0",
+      size: "Pacote iOS (.ipa) · 46,0 MB",
       title: "Lume TV Player para iPhone (iOS)",
-      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), reprodução offline dos seus episódios e envio direto para a TV.",
-      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-iPhone.ipa",
+      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), capas e títulos em PT-BR, Top 10 da semana e YouTube no topo.",
+      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-iPhone.ipa",
       mainLabel: "Baixar Lume TV iPhone (.ipa)",
       variants: [],
       steps: [
-        "Baixe o arquivo oficial <code>Lume-TV-2.0.1-iPhone.ipa</code> pelo Safari e salve em <strong>Arquivos</strong>.",
+        "Baixe o arquivo oficial <code>Lume-TV-2.1.0-iPhone.ipa</code> pelo Safari e salve em <strong>Arquivos</strong>.",
         "Instale via <strong>SideStore + LocalDevVPN</strong> ou dentro do <strong>LiveContainer</strong> (veja o guia ilustrado abaixo).",
         `Abra o Lume TV no iPhone e ative com o código <strong class="mono">HJUZJ4</strong>.`
       ],
@@ -203,9 +203,9 @@
           q: "Apareceu “O app não foi instalado” ou “Conflito de pacote”",
           intro: "Normalmente ocorre quando existe uma versão muito antiga assinada de forma diferente ou falta espaço livre.",
           steps: [
-            "Verifique se há uma versão antiga do Lume TV instalada no celular. Se houver e for de uma versão muito anterior, desinstale a antiga primeiro e instale a <strong>v2.0.1</strong>.",
+            "Verifique se há uma versão antiga do Lume TV instalada no celular. Se houver e for de uma versão muito anterior, desinstale a antiga primeiro e instale a <strong>v2.1.0</strong>.",
             "Confira se o celular tem pelo menos <strong>300 MB livres</strong> de armazenamento.",
-            "Se você baixou a versão <strong>ARM64 Leve</strong> e seu celular for mais antigo (32-bit), baixe a versão <strong>APK Universal (47,8 MB)</strong>."
+            "Se você baixou a versão <strong>ARM64 Leve</strong> e seu celular for mais antigo (32-bit), baixe a versão <strong>APK Universal (49,2 MB)</strong>."
           ]
         },
         {
@@ -296,11 +296,11 @@
             },
             {
               title: "4. Adicione o Lume TV (.ipa) no SideStore e ative HJUZJ4",
-              desc: "Baixe o <code>Lume-TV-2.0.1-iPhone.ipa</code> aqui no site (salve em <strong>Arquivos</strong>). Com o LocalDevVPN conectado, abra <strong>SideStore → My Apps → +</strong>, escolha o <code>.ipa</code> e ative com <strong class=\"mono\">HJUZJ4</strong>.",
+              desc: "Baixe o <code>Lume-TV-2.1.0-iPhone.ipa</code> aqui no site (salve em <strong>Arquivos</strong>). Com o LocalDevVPN conectado, abra <strong>SideStore → My Apps → +</strong>, escolha o <code>.ipa</code> e ative com <strong class=\"mono\">HJUZJ4</strong>.",
               mock: {
                 head: "SideStore · My Apps",
                 rows: [
-                  { label: "Lume-TV-2.0.1-iPhone.ipa" }
+                  { label: "Lume-TV-2.1.0-iPhone.ipa" }
                 ],
                 actions: [
                   { label: "+ Adicionar IPA", type: "target" },
@@ -354,11 +354,11 @@
             },
             {
               title: "4. Adicione o Lume TV (.ipa) e dê Play",
-              desc: "Baixe <code>Lume-TV-2.0.1-iPhone.ipa</code> aqui no site, abra o <strong>LiveContainer → botão +</strong>, selecione o arquivo do Lume TV, toque nele para iniciar e entre com <strong class=\"mono\">HJUZJ4</strong>.",
+              desc: "Baixe <code>Lume-TV-2.1.0-iPhone.ipa</code> aqui no site, abra o <strong>LiveContainer → botão +</strong>, selecione o arquivo do Lume TV, toque nele para iniciar e entre com <strong class=\"mono\">HJUZJ4</strong>.",
               mock: {
                 head: "LiveContainer · Apps",
                 rows: [
-                  { label: "Lume TV Player (v2.0.1)", target: true }
+                  { label: "Lume TV Player (v2.1.0)", target: true }
                 ],
                 actions: [
                   { label: "+ Importar IPA", type: "link" },
@@ -444,7 +444,7 @@
     },
 
     firestick: {
-      summary: "<strong>Amazon Fire TV Stick:</strong> use sempre o arquivo especial <strong>Fire Stick (32-bit · 25,1 MB)</strong> — ele é feito para rodar liso a 60 fps com pouca memória. Todo o processo é feito direto pelo controle remoto.",
+      summary: "<strong>Amazon Fire TV Stick:</strong> use sempre o arquivo especial <strong>Fire Stick (32-bit · 25,9 MB)</strong> — compatível até com Fire Stick mais antigo (API 25+). Todo o processo é feito direto pelo controle remoto.",
       steps: [
         {
           title: "1. Libere as Opções para Desenvolvedores",
@@ -526,7 +526,7 @@
           q: "Apareceu “App não instalado” ou “Armazenamento insuficiente”",
           intro: "O Fire Stick tem pouca memória interna e rejeita APKs pesados ou se não houver espaço livre.",
           steps: [
-            "Certifique-se de baixar a versão <strong>Fire Stick (25,1 MB · 32 bits)</strong> em vez da Universal (47,8 MB).",
+            "Certifique-se de baixar a versão <strong>Fire Stick (25,9 MB · 32 bits)</strong> em vez da Universal (49,2 MB).",
             "Vá em <strong>Configurações → Aplicativos → Gerenciar aplicativos instalados</strong> e limpe o cache de apps grandes (ou desinstale apps que não usa) deixando pelo menos <strong>500 MB livres</strong>.",
             "Se havia uma versão muito antiga do Lume TV instalada, desinstale-a antes de instalar a nova."
           ]
@@ -574,7 +574,7 @@
           mock: {
             head: "Send Files to TV",
             rows: [
-              { label: "Lume-TV-Android.apk (47,8 MB) — Recebido" }
+              { label: "Lume-TV-Android.apk (49,2 MB) — Recebido" }
             ],
             actions: [
               { label: "Send (Celular)", type: "link" },
@@ -623,7 +623,7 @@
           q: "TV Box antiga deu “Erro ao analisar o pacote” ou “App não instalado”",
           intro: "Muitas TV Boxes antigas usam processador 32-bit ou Android bem antigo.",
           steps: [
-            "Se você baixou o APK ARM64, troque para o <strong>APK Universal (47,8 MB)</strong> ou para a versão <strong>32-bit Leve (25,1 MB)</strong> na aba Fire Stick.",
+            "Se você baixou o APK ARM64, troque para o <strong>APK Universal (49,2 MB)</strong> ou para a versão <strong>32-bit Leve (25,9 MB)</strong> na aba Fire Stick.",
             "Confira se há pelo menos 400 MB de espaço livre nas configurações de Armazenamento da Box."
           ]
         },
@@ -650,15 +650,15 @@
     },
 
     windows: {
-      summary: "<strong>Windows (7 sem SP1, 8, 10 e 11 — 32 e 64 bits):</strong> baixe o instalador em 1 clique <code>Instalar-Lume-TV-2.1.2.exe</code>. Ele já instala tudo o que o sistema precisa (inclusive todas as DLLs necessárias no Windows 7 antigo).",
+      summary: "<strong>Windows (7 sem SP1, 8, 10 e 11 — 32 e 64 bits):</strong> baixe o instalador em 1 clique <code>Instalar-Lume-TV-2.2.0.exe</code>. Ele atualiza por cima de versões antigas sem erros mantendo perfis e preferências.",
       steps: [
         {
           title: "1. Baixe e execute o Instalador Universal (.exe)",
-          desc: "Na aba <strong>Windows</strong> acima, clique em <strong>Baixar Instalador Windows (.exe)</strong> e dê dois cliques em <code>Instalar-Lume-TV-2.1.2.exe</code> na pasta Downloads.",
+          desc: "Na aba <strong>Windows</strong> acima, clique em <strong>Baixar Instalador Windows (.exe)</strong> e dê dois cliques em <code>Instalar-Lume-TV-2.2.0.exe</code> na pasta Downloads.",
           mock: {
             head: "Explorador de Arquivos · Downloads",
             rows: [
-              { label: "Instalar-Lume-TV-2.1.2.exe (95,2 MB)", target: true }
+              { label: "Instalar-Lume-TV-2.2.0.exe (95,2 MB)", target: true }
             ],
             hint: "Dê dois cliques no instalador oficial (.exe)."
           }
@@ -683,7 +683,7 @@
           title: "3. Conclua o instalador em 1 clique",
           desc: "Siga o assistente clicando em <strong>Avançar / Instalar</strong>. No Windows 7/8/10/11 ele configura automaticamente os componentes necessários e cria o atalho na Área de Trabalho.",
           mock: {
-            head: "Instalação · Lume TV 2.1.2",
+            head: "Instalação · Lume TV 2.2.0",
             rows: [
               { label: "Configurando player, certificados e atalho..." }
             ],
@@ -734,8 +734,8 @@
           q: "Erro de DLL no Windows 7 (api-ms-win-crt-runtime-l1-1-0.dll / ucrtbase.dll)",
           intro: "Ocorre no Windows 7 sem Service Pack 1 quando se tenta rodar versão antiga.",
           steps: [
-            "Baixe sempre a versão <strong>2.1.2</strong> aqui do site: ela já embute as <strong>41 DLLs oficiais do Universal CRT</strong> ao lado do player para rodar até no Windows 7 sem SP1.",
-            "Se você atualizou de uma versão antiga e ainda apareceu aviso de player, baixe e execute o <strong>Instalador Universal 2.1.2 (.exe)</strong> por cima para reparar automaticamente."
+            "Baixe sempre a versão <strong>2.2.0</strong> aqui do site: ela já embute as <strong>41 DLLs oficiais do Universal CRT</strong> ao lado do player para rodar até no Windows 7 sem SP1.",
+            "Se você atualizou de uma versão antiga, execute o <strong>Instalador Universal 2.2.0 (.exe)</strong> por cima — ele fecha processos antigos com segurança e mantém seus perfis intactos."
           ]
         },
         {
@@ -752,8 +752,8 @@
           q: "Janela abriu branca ou o vídeo fechou no PC antigo sem placa de vídeo moderna",
           intro: "Drivers antigos de vídeo no Windows 7/8 podem rejeitar aceleração padrão.",
           steps: [
-            "A versão <strong>2.1.2</strong> já detecta automaticamente Windows 7/8 e ativa o modo de vídeo seguro.",
-            "Se o PC estiver sem WebView2 no Windows 10/11, execute o <strong>Instalador Universal 2.1.2 (.exe)</strong> que ele baixa e instala o runtime oficial automaticamente."
+            "A versão <strong>2.2.0</strong> já detecta automaticamente Windows 7/8 e aplica fallbacks seguros contra tela preta.",
+            "Se o PC estiver sem WebView2 no Windows 10/11, execute o <strong>Instalador Universal 2.2.0 (.exe)</strong> que ele baixa e instala o runtime oficial automaticamente."
           ]
         },
         {
@@ -852,13 +852,13 @@
         b.setAttribute("aria-selected", String(active));
       });
       if (mode === "tv") {
-        if (ytStep2Title) ytStep2Title.textContent = "Desça até o seu Perfil na TV";
-        if (ytStep2Desc) ytStep2Desc.textContent = "No Fire Stick ou Android TV, use o controle remoto para ir até o fim do menu lateral.";
-        if (miniUiTrigger) miniUiTrigger.textContent = "Menu Lateral › Perfil";
+        if (ytStep2Title) ytStep2Title.textContent = "Navegue na barra superior até YouTube";
+        if (ytStep2Desc) ytStep2Desc.textContent = "No Fire Stick ou Android TV, use a seta para cima até o menu do topo e selecione YouTube.";
+        if (miniUiTrigger) miniUiTrigger.textContent = "▶ Barra Superior · YouTube";
       } else {
-        if (ytStep2Title) ytStep2Title.textContent = "Toque nos três pontinhos (•••)";
-        if (ytStep2Desc) ytStep2Desc.textContent = "No celular Android e no iPhone, eles ficam lá no topo, bem ao lado da lupa de busca.";
-        if (miniUiTrigger) miniUiTrigger.textContent = "••• Perfil";
+        if (ytStep2Title) ytStep2Title.textContent = "Olhe a barra superior no topo";
+        if (ytStep2Desc) ytStep2Desc.textContent = "No celular Android e no iPhone, o botão YouTube fica logo ao lado de Minha lista.";
+        if (miniUiTrigger) miniUiTrigger.textContent = "▶ YouTube";
       }
     });
   });
@@ -1101,6 +1101,143 @@
     }
   })();
 
+  // 8.6 Sincronização automática das últimas releases do GitHub (/api/releases + fallback GitHub REST)
+  function applyReleaseManifest(manifest) {
+    if (!manifest || !manifest.assets) return;
+    const mv = String(manifest.mobileVersion || "2.1.0");
+    const wv = String(manifest.windowsVersion || "2.2.0");
+    const a = manifest.assets;
+
+    if (a.androidUniversal) {
+      DOWNLOADS.android.badge = `● Versão ${mv}`;
+      DOWNLOADS.android.size = `APK Universal · ${a.androidUniversal.sizeMb} MB`;
+      DOWNLOADS.android.mainUrl = a.androidUniversal.url;
+      DOWNLOADS.androidtv.badge = `● Versão ${mv}`;
+      DOWNLOADS.androidtv.size = `APK Universal · ${a.androidUniversal.sizeMb} MB`;
+      DOWNLOADS.androidtv.mainUrl = a.androidUniversal.url;
+      if (a.androidArm64) {
+        DOWNLOADS.android.variants = [{
+          label: `ARM64 Leve (${a.androidArm64.sizeMb} MB)`,
+          url: a.androidArm64.url
+        }];
+      }
+    }
+    if (a.fireStick) {
+      DOWNLOADS.firestick.badge = `● Versão ${mv}`;
+      DOWNLOADS.firestick.size = `APK 32 bits Leve · ${a.fireStick.sizeMb} MB`;
+      DOWNLOADS.firestick.mainUrl = a.fireStick.url;
+      DOWNLOADS.firestick.qrTitle = `QR Code · Fire TV Stick (${a.fireStick.sizeMb} MB)`;
+      if (a.androidUniversal) {
+        DOWNLOADS.firestick.variants = [{
+          label: `Universal (${a.androidUniversal.sizeMb} MB)`,
+          url: a.androidUniversal.url
+        }];
+      }
+    }
+    if (a.windowsInstaller) {
+      DOWNLOADS.windows.badge = `● Versão ${wv}`;
+      DOWNLOADS.windows.size = `Instalador Universal · ${a.windowsInstaller.sizeMb} MB`;
+      DOWNLOADS.windows.mainUrl = a.windowsInstaller.url;
+      const wFile = a.windowsInstaller.file || `Instalar-Lume-TV-${wv}.exe`;
+      DOWNLOADS.windows.steps[0] = `Baixe e execute o arquivo <code>${wFile}</code>.`;
+      const wVars = [];
+      if (a.windowsPortable64) wVars.push({ label: `Portátil x64 (${a.windowsPortable64.sizeMb} MB)`, url: a.windowsPortable64.url });
+      if (a.windowsPortable32) wVars.push({ label: `Portátil Win7 32-bit (${a.windowsPortable32.sizeMb} MB)`, url: a.windowsPortable32.url });
+      if (wVars.length) DOWNLOADS.windows.variants = wVars;
+    }
+    if (a.iphone) {
+      DOWNLOADS.iphone.badge = `● Versão ${mv}`;
+      DOWNLOADS.iphone.size = `Pacote iOS (.ipa) · ${a.iphone.sizeMb} MB`;
+      DOWNLOADS.iphone.mainUrl = a.iphone.url;
+      DOWNLOADS.iphone.steps[0] = `Baixe o arquivo oficial <code>Lume-TV-${mv}-iPhone.ipa</code> pelo Safari e salve em <strong>Arquivos</strong>.`;
+    }
+
+    document.querySelectorAll("[data-mobile-version]").forEach((el) => { el.textContent = mv; });
+    document.querySelectorAll("[data-windows-version]").forEach((el) => { el.textContent = wv; });
+    const pill = document.getElementById("dlSyncPill");
+    if (pill) pill.textContent = `✓ GitHub v${mv} · Win v${wv}`;
+    selectPlatform(activeDownloadPlatform);
+  }
+
+  (async () => {
+    try {
+      const res = await fetch("/api/releases", { cache: "no-store" });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.assets) {
+          applyReleaseManifest(data);
+          return;
+        }
+      }
+    } catch (_) {}
+
+    try {
+      const ghRes = await fetch("https://api.github.com/repos/Drill23/lume-tv-atualizacoes/releases?per_page=15");
+      if (!ghRes.ok) return;
+      const list = await ghRes.json();
+      if (!Array.isArray(list)) return;
+      const mRel = list.find((r) => !r.draft && !r.prerelease && /^v(\d+\.\d+\.\d+)$/.test(String(r.tag_name || "")));
+      const wRel = list.find((r) => !r.draft && !r.prerelease && /^windows-v(\d+\.\d+\.\d+)$/.test(String(r.tag_name || "")));
+      const mb = (bytes, fb) => (Number.isFinite(bytes) && bytes > 0) ? (bytes / (1024 * 1024)).toFixed(1).replace(".", ",") : fb;
+      const pick = (rel, re) => (Array.isArray(rel?.assets) ? rel.assets.find((x) => re.test(String(x?.name || ""))) : null);
+      const mv = mRel ? String(mRel.tag_name).replace(/^v/, "") : "2.1.0";
+      const wv = wRel ? String(wRel.tag_name).replace(/^windows-v/, "") : "2.2.0";
+      const aUni = pick(mRel, /^Lume-TV-(?:\d+\.\d+\.\d+-)?Android\.apk$/i);
+      const aArm = pick(mRel, /^Lume-TV-(?:\d+\.\d+\.\d+-)?ARM64\.apk$/i);
+      const aFs = pick(mRel, /^Lume-TV-(?:\d+\.\d+\.\d+-)?FireStick\.apk$/i);
+      const aIos = pick(mRel, /^Lume-TV-(?:\d+\.\d+\.\d+-)?iPhone\.ipa$/i);
+      const wExe = pick(wRel, /^Instalar-Lume-TV-.*\.exe$/i);
+      const wZip64 = pick(wRel, /^LumeTV-.*-Win64\.zip$/i);
+      const wZip32 = pick(wRel, /^LumeTV-.*-Win7-x86\.zip$/i);
+      applyReleaseManifest({
+        mobileVersion: mv,
+        windowsVersion: wv,
+        assets: {
+          androidUniversal: { url: aUni?.browser_download_url || DOWNLOADS.android.mainUrl, sizeMb: mb(aUni?.size, "49,2") },
+          androidArm64: { url: aArm?.browser_download_url || DOWNLOADS.android.variants[0].url, sizeMb: mb(aArm?.size, "25,3") },
+          fireStick: { url: aFs?.browser_download_url || DOWNLOADS.firestick.mainUrl, sizeMb: mb(aFs?.size, "25,9") },
+          iphone: { url: aIos?.browser_download_url || DOWNLOADS.iphone.mainUrl, sizeMb: mb(aIos?.size, "46,0") },
+          windowsInstaller: { url: wExe?.browser_download_url || DOWNLOADS.windows.mainUrl, file: wExe?.name || `Instalar-Lume-TV-${wv}.exe`, sizeMb: mb(wExe?.size, "95,2") },
+          windowsPortable64: { url: wZip64?.browser_download_url || DOWNLOADS.windows.variants[0].url, sizeMb: mb(wZip64?.size, "63,9") },
+          windowsPortable32: { url: wZip32?.browser_download_url || DOWNLOADS.windows.variants[1].url, sizeMb: mb(wZip32?.size, "59,8") }
+        }
+      });
+    } catch (_) {}
+  })();
+
+  // 8.7 Progresso de leitura, navbar dinâmica e foco inteligente (TV D-Pad + teclado)
+  const navbarEl = document.getElementById("navbar");
+  const scrollBar = document.getElementById("scrollProgress");
+  let scrollTicking = false;
+  const updateScrollFx = () => {
+    scrollTicking = false;
+    const y = window.scrollY || window.pageYOffset || 0;
+    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    if (scrollBar) scrollBar.style.setProperty("--scroll-p", Math.min(1, Math.max(0, y / max)).toFixed(4));
+    if (navbarEl) navbarEl.classList.toggle("is-scrolled", y > 24);
+  };
+  window.addEventListener("scroll", () => {
+    if (!scrollTicking) {
+      scrollTicking = true;
+      requestAnimationFrame(updateScrollFx);
+    }
+  }, { passive: true });
+  updateScrollFx();
+
+  document.addEventListener("focusin", (e) => {
+    const el = e.target;
+    if (!(el instanceof Element)) return;
+    if (typeof el.matches === "function" && el.matches(":focus-visible")) {
+      el.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+    }
+    const card = el.closest(".spotlight-card");
+    if (card) {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${Math.round(r.width * 0.5)}px`);
+      card.style.setProperty("--my", `${Math.round(r.height * 0.35)}px`);
+    }
+  });
+
   // 9. Brilho reativo no Hero (Notebook + iPhone) ao mover e aproximar do centro dos ícones Play
   const heroStage = document.querySelector(".hero-stage");
   const heroDeviceRender = document.querySelector(".hero-device-render");
@@ -1160,8 +1297,13 @@
     });
   });
 
-  // 11. Reveal on Scroll
+  // 11. Reveal on Scroll (com atraso progressivo em grupos)
   const reveals = document.querySelectorAll(".reveal");
+  document.querySelectorAll(".whatsnew-strip, .player-areas-grid, .devices-grid, .bento-grid").forEach((grid) => {
+    Array.from(grid.querySelectorAll(".reveal")).forEach((el, idx) => {
+      el.style.setProperty("--stagger", String(idx % 6));
+    });
+  });
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -1179,7 +1321,7 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // 12. Animação leve Cinema Prism no canvas de fundo
+  // 12. Animação leve Cinema Prism no canvas de fundo (anéis orbitais + partículas suaves)
   const canvas = document.getElementById("prismCanvas");
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (canvas && !reducedMotion) {
@@ -1187,6 +1329,13 @@
     let w = 0;
     let h = 0;
     let angle = 0;
+    const sparks = Array.from({ length: 18 }, (_, i) => ({
+      x: ((i * 73) % 100) / 100,
+      y: ((i * 41) % 100) / 100,
+      r: 0.9 + (i % 3) * 0.55,
+      sp: 0.00018 + (i % 4) * 0.00009,
+      a: 0.14 + (i % 3) * 0.08
+    }));
 
     function resize() {
       w = canvas.width = window.innerWidth;
@@ -1209,24 +1358,34 @@
       // Anel orbital âmbar-coral
       ctx.rotate(angle);
       const g1 = ctx.createLinearGradient(-r, -r, r, r);
-      g1.addColorStop(0, "rgba(255, 181, 71, 0.22)");
-      g1.addColorStop(0.5, "rgba(255, 107, 107, 0.08)");
+      g1.addColorStop(0, "rgba(255, 181, 71, 0.24)");
+      g1.addColorStop(0.5, "rgba(255, 107, 107, 0.10)");
       g1.addColorStop(1, "rgba(255, 181, 71, 0)");
       ctx.strokeStyle = g1;
-      ctx.lineWidth = 1.4;
+      ctx.lineWidth = 1.5;
       ctx.beginPath();
       ctx.arc(0, 0, r, 0, Math.PI * 1.45);
       ctx.stroke();
 
       // Anel contrarrotativo interno
       ctx.rotate(-angle * 2.1);
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.09)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.arc(0, 0, r * 0.72, 0.4, Math.PI * 1.6);
       ctx.stroke();
-
       ctx.restore();
+
+      // Poeira luminosa discreta Cinema Prism
+      for (const s of sparks) {
+        s.y -= s.sp;
+        if (s.y < -0.02) s.y = 1.02;
+        ctx.fillStyle = `rgba(255, 200, 118, ${s.a})`;
+        ctx.beginPath();
+        ctx.arc(s.x * w, s.y * h, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
