@@ -13,13 +13,15 @@
   }
 
   // 1. Dados da Central de Downloads (links exatos oficiais)
+  const ANDROID_APK = "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-Android.apk";
+  const FIRESTICK_APK = "https://lume-tv-be0.pages.dev/fire.apk";
   const DOWNLOADS = {
     android: {
       badge: "● Versão 2.0.1",
       size: "APK Universal · 47,8 MB",
       title: "Lume TV Player para Celular & Tablet Android",
-      desc: "Baixe o player direto no celular ou aponte a câmera para o QR Code ao lado. Compatível com qualquer celular ou tablet Android.",
-      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
+      desc: "Baixe no celular ou aponte a câmera para o QR Code ao lado. Requer Android 8 ou superior e processador ARM.",
+      mainUrl: ANDROID_APK,
       mainLabel: "Baixar Lume TV Android (.apk)",
       variants: [
         {
@@ -38,34 +40,34 @@
       showQrSwitch: true
     },
     firestick: {
-      badge: "● Versão 2.0.1",
+      badge: "● Versão 2.0.2",
       size: "APK 32 bits Leve · 25,1 MB",
       title: "Lume TV Player para Amazon Fire TV Stick",
-      desc: "Compilação leve feita sob medida para o player reproduzir seus vídeos a 60 fps no Fire Stick sem travar nem ocupar espaço.",
-      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-FireStick.apk",
+      desc: "Para Fire OS 6 ou superior com suporte a apps Android ARM de 32 bits. Inclui o Fire TV Stick 4K de 1ª geração. Modelos com Vega OS, como o 4K Select, não instalam APKs Android.",
+      mainUrl: FIRESTICK_APK,
       mainLabel: "Baixar versão Fire Stick (.apk)",
       variants: [
         {
-          label: "Universal 47,8 MB",
-          url: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk"
+          label: "Universal 2.0.1 · Fire OS 7 ou superior",
+          url: ANDROID_APK
         }
       ],
       steps: [
         "Na loja da Amazon no Fire Stick, instale o app gratuito <strong>Downloader</strong>.",
-        "Vá em <em>Configurações › Minha Fire TV › Opções do desenvolvedor</em> e permita instalar apps pelo Downloader.",
-        `Abra <strong>lume-tv-be0.pages.dev</strong> no Downloader ou use o QR Code ao lado e ative com <strong class="mono">HJUZJ4</strong>.`
+        "Vá em <em>Configurações › Minha Fire TV › Opções do desenvolvedor</em> e permita instalar apps de fontes desconhecidas pelo Downloader.",
+        `Digite <code>${FIRESTICK_APK}</code> no Downloader e pressione <strong>Go</strong>. Após instalar, ative com <strong class="mono">HJUZJ4</strong>.`
       ],
       qr: "assets/qr/qr-firestick.svg",
-      qrTitle: "QR Code · Fire TV Stick (25,1 MB)",
-      qrSub: "Link direto da versão leve 32 bits para Fire Stick.",
+      qrTitle: "QR Code · Fire Stick 2.0.2",
+      qrSub: "Link direto do APK de 32 bits para Fire OS 6 ou superior.",
       showQrSwitch: false
     },
     androidtv: {
       badge: "● Versão 2.0.1",
       size: "APK Universal · 47,8 MB",
       title: "Lume TV Player para Android TV & Google TV",
-      desc: "Interface feita para o controle remoto para você organizar seus filmes, séries e suas listas M3U com áudio PT-BR priorizado.",
-      mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/latest/download/Lume-TV-Android.apk",
+      desc: "Interface para controle remoto. Requer Android 8 ou superior e processador ARM.",
+      mainUrl: ANDROID_APK,
       mainLabel: "Baixar para Android TV (.apk)",
       variants: [],
       steps: [
@@ -109,7 +111,7 @@
       badge: "● Versão 2.0.1",
       size: "Pacote iOS (.ipa) · 46,2 MB",
       title: "Lume TV Player para iPhone (iOS)",
-      desc: "Visual Liquid Glass nativo, Picture-in-Picture (PiP), reprodução offline dos seus episódios e envio direto para a TV.",
+      desc: "Para iPhones com iOS 18 ou superior, com Picture-in-Picture e reprodução offline.",
       mainUrl: "https://github.com/Drill23/lume-tv-atualizacoes/releases/download/v2.0.1/Lume-TV-2.0.1-iPhone.ipa",
       mainLabel: "Baixar Lume TV iPhone (.ipa)",
       variants: [],
@@ -444,7 +446,7 @@
     },
 
     firestick: {
-      summary: "<strong>Amazon Fire TV Stick:</strong> use sempre o arquivo especial <strong>Fire Stick (32-bit · 25,1 MB)</strong> — ele é feito para rodar liso a 60 fps com pouca memória. Todo o processo é feito direto pelo controle remoto.",
+      summary: "<strong>Amazon Fire TV Stick</strong> · O APK 2.0.2 de 32 bits aceita Fire OS 6 ou superior em aparelhos compatíveis com apps Android.",
       steps: [
         {
           title: "1. Libere as Opções para Desenvolvedores",
@@ -460,7 +462,7 @@
         },
         {
           title: "2. Instale o app Downloader e dê permissão",
-          desc: "Na lupa da loja Amazon, baixe o app gratuito <strong>Downloader</strong> (ícone laranja). Depois volte em <strong>Configurações → Minha Fire TV → Opções para desenvolvedores → Instalar apps desconhecidos</strong> e mude o Downloader para <strong>ATIVADO</strong>.",
+          desc: "Instale o app gratuito <strong>Downloader</strong> pela loja Amazon. Depois abra <strong>Configurações → Minha Fire TV → Opções para desenvolvedores</strong> e habilite <strong>Apps de fontes desconhecidas</strong> ou permita o Downloader em <strong>Instalar apps desconhecidos</strong>.",
           mock: {
             head: "Opções para desenvolvedores",
             rows: [
@@ -471,16 +473,16 @@
         },
         {
           title: "3. Baixe o Lume TV pelo Downloader",
-          desc: "Abra o <strong>Downloader</strong>, toque na barra de endereço, digite <code>lume-tv-be0.pages.dev</code> e aperte <strong>Go</strong>. Role até a aba <strong>Fire TV Stick</strong> e clique em <strong>Baixar versão Fire Stick (.apk)</strong>.",
+          desc: `Abra o <strong>Downloader</strong>, digite <code>${FIRESTICK_APK}</code> na barra de endereço e pressione <strong>Go</strong>.`,
           mock: {
-            head: "Downloader · Navegador",
+            head: "Downloader · Home",
             rows: [
-              { label: "https://lume-tv-be0.pages.dev", target: true }
+              { label: FIRESTICK_APK, target: true }
             ],
             actions: [
               { label: "Go", type: "target" }
             ],
-            hint: "Ou use o link direto do APK na barra do Downloader."
+            hint: "O download começa pelo endereço do arquivo."
           }
         },
         {
@@ -514,11 +516,11 @@
         {
           tag: "BLOQUEIO",
           q: "Downloader baixou, mas ao clicar em Instalar não acontece nada ou dá erro",
-          intro: "Faltou ligar a permissão específica para o app Downloader.",
+          intro: "Confira a permissão do Downloader e a compatibilidade do modelo.",
           steps: [
-            "Vá em <strong>Configurações → Minha Fire TV → Opções para desenvolvedores → Instalar apps desconhecidos</strong>.",
-            "Encontre o <strong>Downloader</strong> na lista e deixe como <strong>ATIVADO</strong>.",
-            "Se já estiver ativado, reinicie o Fire Stick (segure <em>Play/Pause + Botão Central</em> por 5 segundos) e abra o Downloader em <em>Files</em> para instalar de novo."
+            "Abra <strong>Configurações → Minha Fire TV → Opções para desenvolvedores</strong> e habilite a instalação de apps de fontes desconhecidas pelo Downloader.",
+            `Se o aparelho tiver Fire OS 6, baixe novamente pelo link <code>${FIRESTICK_APK}</code> e confira se o arquivo é <strong>Lume-TV-2.0.2-FireStick.apk</strong>.`,
+            "O Fire TV Stick 4K Select com Vega OS não instala APKs Android."
           ]
         },
         {
@@ -528,7 +530,7 @@
           steps: [
             "Certifique-se de baixar a versão <strong>Fire Stick (25,1 MB · 32 bits)</strong> em vez da Universal (47,8 MB).",
             "Vá em <strong>Configurações → Aplicativos → Gerenciar aplicativos instalados</strong> e limpe o cache de apps grandes (ou desinstale apps que não usa) deixando pelo menos <strong>500 MB livres</strong>.",
-            "Se havia uma versão muito antiga do Lume TV instalada, desinstale-a antes de instalar a nova."
+            "Se o Lume TV já estiver instalado, atualize por cima para preservar seus dados. Em caso de conflito de assinatura, mantenha a instalação e confira de onde veio o APK anterior."
           ]
         },
         {
@@ -544,9 +546,9 @@
         {
           tag: "DOWNLOADER",
           q: "O navegador do Downloader não carrega o botão ou trava na página",
-          intro: "O controle remoto do Fire Stick às vezes fica preso no modo scroll.",
+          intro: "O endereço direto inicia o download pela tela Home do Downloader.",
           steps: [
-            "No Downloader, aperte <strong>Menu (☰)</strong> se precisar alternar o ponteiro, ou use o botão de <strong>Seta para baixo</strong> até destacar o botão laranja de download.",
+            `Na tela <strong>Home</strong> do Downloader, digite <code>${FIRESTICK_APK}</code> e pressione <strong>Go</strong>.`,
             "Alternativa ainda mais rápida: baixe o APK no celular Android e envie sem cabo para o Fire Stick usando o app gratuito <strong>Send Files to TV</strong>."
           ]
         }
@@ -565,7 +567,7 @@
               { label: "Send Files to TV (Grátis)", target: true },
               { label: "Downloader by AFTVnews (Alternativa)" }
             ],
-            hint: "Os dois funcionam perfeitamente em qualquer Android TV / Google TV."
+            hint: "Confira se o app escolhido aparece na Play Store da sua TV."
           }
         },
         {
@@ -900,8 +902,6 @@
         const a = document.createElement("a");
         a.className = "variant-link";
         a.href = v.url;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
         a.textContent = `↓ ${v.label}`;
         dlVariants.appendChild(a);
       });
