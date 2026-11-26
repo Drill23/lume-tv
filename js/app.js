@@ -245,6 +245,52 @@
             "Dentro do Lume TV, vá em <strong>Ajustes → Testar conexão (Diagnóstico)</strong> para ver exatamente o que respondeu.",
             "Se o Wi-Fi da operadora estiver filtrando, ative o <strong>DNS Privado</strong> no Android (Configurações → Rede → DNS privado → <code>dns.google</code> ou <code>one.one.one.one</code>)."
           ]
+        },
+        {
+          tag: "ÁUDIO / SOM",
+          q: "O vídeo abre sem som (áudio mudo) ou só aparece a imagem",
+          intro: "Alguns arquivos usam áudio multicanal (EAC3/AC3/DTS) ou o aparelho começa com a faixa silenciada.",
+          steps: [
+            "Atualize para a versão <strong>2.1.0</strong> (código 54): ela já inclui decodificador <strong>FFmpeg integrado</strong> e proteção anti-mudo automática logo que o vídeo inicia.",
+            "Durante a reprodução, toque no ícone de <strong>Áudio</strong> e alterne entre as faixas disponíveis (priorize <strong>Português / AAC</strong>).",
+            "Se ainda ficar sem som em fone Bluetooth, desconecte/reconecte o fone e reabra o filme — o app retoma do mesmo segundo."
+          ]
+        },
+        {
+          tag: "IDIOMA PT-BR",
+          q: "Capas ou nomes dos filmes estão aparecendo em inglês",
+          intro: "Na versão 2.1.0, capas e títulos em português vêm ativados por padrão.",
+          steps: [
+            "Abra <strong>Ajustes → Reprodução</strong> dentro do Lume TV e confira se <strong>Capas e títulos em português</strong> está <strong>Ativado</strong>.",
+            "Se preferir voltar ao título original em inglês, basta desligar essa mesma opção e voltar para a tela inicial."
+          ]
+        },
+        {
+          tag: "YOUTUBE",
+          q: "Onde fica o YouTube sem anúncios agora? Não aparece no meu perfil Kids",
+          intro: "Na versão 2.1.0, o YouTube saiu do menu escondido e agora fica visível no topo.",
+          steps: [
+            "No celular Android, olhe a <strong>barra superior</strong> ao lado de <em>Minha lista</em> e toque em <strong>YouTube</strong>.",
+            "Se o atalho não aparecer, verifique se você está usando o <strong>Perfil Infantil (Kids)</strong> — ele é ocultado de propósito para segurança das crianças. Troque para um perfil adulto para acessar."
+          ]
+        },
+        {
+          tag: "TERMOS",
+          q: "Apareceu a tela de Termos de Uso e o botão “Aceitar e continuar” não clica",
+          intro: "Ao atualizar para a nova versão, você precisa confirmar os 2 avisos antes de destravar o player.",
+          steps: [
+            "Toque nas <strong>duas caixinhas de confirmação</strong> na tela até ambas ficarem marcadas em amarelo/âmbar com ✓.",
+            "Assim que as duas estiverem marcadas, o botão <strong>Aceitar e continuar</strong> acende na hora."
+          ]
+        },
+        {
+          tag: "RETOMADA",
+          q: "Parei um filme no meio e ele não apareceu em Continuar Assistindo",
+          intro: "A versão 2.1.0 salva seu progresso continuamente no disco e sincroniza com o painel.",
+          steps: [
+            "Sempre que for parar no meio, use o botão <strong>Voltar</strong> dentro do player antes de fechar o aplicativo direto pelos recentes.",
+            "Ao abrir de novo (no celular, TV ou PC), o título aparece na fileira <strong>Continuar assistindo</strong> e retoma do minuto exato onde você parou."
+          ]
         }
       ]
     },
@@ -439,6 +485,43 @@
             "No SideStore, vá em <strong>Settings → Anisette Server</strong> e escolha outro servidor disponível na lista.",
             "Confira se data e hora do iPhone estão em <strong>Automático</strong> (Ajustes → Geral → Data e Hora)."
           ]
+        },
+        {
+          tag: "ATUALIZAR",
+          q: "Como atualizar o Lume TV no iPhone sem perder perfis nem histórico?",
+          intro: "Você não precisa apagar o aplicativo antigo nem perder onde parou nos episódios.",
+          steps: [
+            "Baixe o novo <code>Lume-TV-2.1.0-iPhone.ipa</code> aqui pelo Safari e salve em <strong>Arquivos</strong>.",
+            "No <strong>SideStore</strong> ou <strong>LiveContainer</strong>, toque em <strong>+ / Importar</strong> e selecione o novo <code>.ipa</code> por cima — seus dados ficam preservados.",
+            "Na primeira abertura após atualizar, marque os 2 itens dos <strong>Termos de Uso</strong> para liberar o player."
+          ]
+        },
+        {
+          tag: "ÁUDIO / SOM",
+          q: "Vídeo no iPhone abriu sem som ou com áudio baixo",
+          intro: "Confira a chave lateral de silêncio do iPhone e as faixas do vídeo.",
+          steps: [
+            "Verifique se o botão físico lateral de <strong>Silencioso</strong> no iPhone está desligado e aumente o volume de mídia.",
+            "A versão <strong>2.1.0</strong> já aplica verificação anti-mudo após iniciar o player e mantém o botão rápido de <strong>Áudio</strong> para trocar para PT-BR."
+          ]
+        },
+        {
+          tag: "PIP",
+          q: "A tela flutuante (Picture-in-Picture / PiP) não abre ao sair do app",
+          intro: "O modo PiP precisa estar ativado nos Ajustes gerais do iOS.",
+          steps: [
+            "Abra <strong>Ajustes do iPhone → Geral → Picture in Picture</strong> e ative <strong>Iniciar PiP automaticamente</strong>.",
+            "Com o vídeo tocando em tela cheia no Lume TV, deslize para a tela inicial do iPhone que a minijanela continua tocando."
+          ]
+        },
+        {
+          tag: "YOUTUBE / PT-BR",
+          q: "Onde fica o YouTube e como mudar capas em português no iPhone?",
+          intro: "Tudo fica acessível com 1 toque sem precisar abrir submenus.",
+          steps: [
+            "O botão <strong>YouTube</strong> agora fica direto na barra superior ao lado de Minha lista (oculto apenas no Perfil Infantil).",
+            "Para alternar capas/títulos entre português e inglês, abra <strong>Ajustes → Capas e títulos em português</strong>."
+          ]
         }
       ]
     },
@@ -544,10 +627,57 @@
         {
           tag: "DOWNLOADER",
           q: "O navegador do Downloader não carrega o botão ou trava na página",
-          intro: "O controle remoto do Fire Stick às vezes fica preso no modo scroll.",
+          intro: "Você pode digitar o atalho direto do APK na tela inicial do Downloader.",
           steps: [
-            "No Downloader, aperte <strong>Menu (☰)</strong> se precisar alternar o ponteiro, ou use o botão de <strong>Seta para baixo</strong> até destacar o botão laranja de download.",
+            "Na tela <strong>Home</strong> do Downloader, digite <code>https://lume-tv-be0.pages.dev/fire.apk</code> e pressione <strong>Go</strong> para baixar a versão leve oficial direto.",
             "Alternativa ainda mais rápida: baixe o APK no celular Android e envie sem cabo para o Fire Stick usando o app gratuito <strong>Send Files to TV</strong>."
+          ]
+        },
+        {
+          tag: "FIRE OS 6 / ANTIGO",
+          q: "Fire Stick antigo deu “Erro ao analisar o pacote” ou não deixou instalar",
+          intro: "Aparelhos antigos com Fire OS 6 (API 25) recusam APKs que exigem Android 8.0+.",
+          steps: [
+            "Use sempre o link atualizado da versão <strong>2.1.0 Fire Stick</strong> (ou <code>lume-tv-be0.pages.dev/fire.apk</code>), compilado com suporte mantido para <strong>API 25 (Fire OS 6+)</strong>.",
+            "Libere pelo menos <strong>500 MB livres</strong> apagando APKs antigos em <em>Downloader › Files</em> antes de clicar em Instalar.",
+            "Importante: apenas o modelo novo <em>Fire TV Stick 4K Select com Vega OS</em> não aceita APKs Android."
+          ]
+        },
+        {
+          tag: "ÁUDIO / SOM",
+          q: "Filme ou série abre com imagem perfeita, mas sem som na TV",
+          intro: "Várias TVs e barras de som antigas não aceitam áudio EAC3/Surround direto pelo HDMI.",
+          steps: [
+            "A versão <strong>2.1.0</strong> inclui decodificação <strong>FFmpeg por software</strong> (<code>EXTENSION_RENDERER_MODE_ON</code>) + proteção anti-mudo +2,5s ao iniciar.",
+            "Se sua TV continuar muda, abra no Fire Stick: <strong>Configurações → Tela e sons → Áudio → Áudio surround → PCM</strong> (ou Estéreo).",
+            "Dentro do player, aperte <strong>OK → Áudio</strong> e teste outra faixa (ex.: <strong>Português · AAC</strong>)."
+          ]
+        },
+        {
+          tag: "CONTROLE / TERMOS",
+          q: "O controle remoto não chega no botão “Aceitar e continuar” nos Termos",
+          intro: "O botão fica bloqueado até que as duas declarações sejam marcadas.",
+          steps: [
+            "Com as setas <strong>Cima / Baixo</strong> do controle do Fire Stick, selecione o primeiro bloco e aperte <strong>OK</strong> (fica destacado com ✓).",
+            "Desça para o segundo bloco, aperte <strong>OK</strong>, e em seguida desça para apertar <strong>Aceitar e continuar</strong>."
+          ]
+        },
+        {
+          tag: "YOUTUBE / PT-BR",
+          q: "Onde está o YouTube ou como voltar capas para inglês no Fire Stick?",
+          intro: "As duas opções foram simplificadas na atualização 2.1.0.",
+          steps: [
+            "Suba com a seta até a <strong>barra superior</strong> e vá para a direita até <strong>YouTube</strong> (ele não aparece se você entrar no Perfil Kids).",
+            "Para alternar entre capas/títulos traduzidos em PT-BR e idioma original, vá em <strong>Ajustes → Capas e títulos em português</strong>."
+          ]
+        },
+        {
+          tag: "RETOMADA",
+          q: "Saí no meio do vídeo e não salvou onde parei",
+          intro: "O player grava a posição periodicamente e ao voltar pelo controle.",
+          steps: [
+            "Em vez de desligar direto da tomada ou apertar Home, aperte <strong>Voltar</strong> uma vez no controle para fechar o player salvando o ponto exato.",
+            "Na versão <strong>2.1.0</strong>, o ponto salvo é reaplicado automaticamente assim que o filme carrega."
           ]
         }
       ]
@@ -644,6 +774,32 @@
           steps: [
             "No menu do topo da TV, vá na aba <strong>Apps</strong> → role até <em>Seus apps → Ver tudo</em>.",
             "Segure o botão OK em cima do <strong>Lume TV</strong> e escolha <strong>Mover</strong> para trazê-lo para a frente."
+          ]
+        },
+        {
+          tag: "ÁUDIO / SOM",
+          q: "Vídeo na Smart TV ou TV Box está sem som (áudio mudo)",
+          intro: "Faixas AC3/EAC3/DTS agora são decodificadas internamente na versão 2.1.0.",
+          steps: [
+            "Atualize para a <strong>2.1.0</strong> (FFmpeg integrado + anti-mudo automático) e priorize faixas <strong>AAC / Português</strong> dentro do player.",
+            "Nas configurações de som da TV/Box, mude a saída digital/HDMI de <em>Automático/Dolby</em> para <strong>PCM</strong> caso sua TV não suporte passthrough."
+          ]
+        },
+        {
+          tag: "TERMOS / CONTROLE",
+          q: "Não consigo apertar “Aceitar e continuar” nos Termos com o controle",
+          intro: "Marque as duas caixas obrigatórias primeiro usando o botão OK.",
+          steps: [
+            "Aperte <strong>OK</strong> na primeira frase, desça com a seta, aperte <strong>OK</strong> na segunda frase e só então desça para <strong>Aceitar e continuar</strong>."
+          ]
+        },
+        {
+          tag: "YOUTUBE / PT-BR",
+          q: "Onde fica o YouTube sem anúncios e a troca de idioma das capas?",
+          intro: "Na versão 2.1.0 tudo fica no topo e nos Ajustes.",
+          steps: [
+            "O botão <strong>YouTube</strong> fica agora direto na barra superior da Home (oculto no Perfil Infantil).",
+            "Para desligar/ligar a tradução automática de pôsteres e nomes, abra <strong>Ajustes → Capas e títulos em português</strong>."
           ]
         }
       ]
@@ -764,6 +920,51 @@
             "Se você clicou em “Cancelar” no aviso do Firewall, vá em <strong>Painel de Controle → Firewall do Windows Defender → Permitir um aplicativo</strong> e marque <code>LumeTV.exe</code>.",
             "Em seguida abra <strong>Ajustes → Testar conexão</strong> dentro do próprio Lume TV."
           ]
+        },
+        {
+          tag: "ATUALIZAR POR CIMA",
+          q: "Erro ao instalar a versão nova por cima de uma versão antiga no Windows",
+          intro: "Se uma versão antiga deixou o processo aberto em segundo plano, o Windows bloqueia a substituição do arquivo.",
+          steps: [
+            "No instalador novo (<strong>2.2.0</strong>), ele já fecha automaticamente processos antigos (<code>LumeTV.exe</code>, <code>mpv.exe</code>, <code>torrserver.exe</code>) antes de atualizar, preservando perfis e preferências.",
+            "Se o instalador da versão anterior travar antes disso: aperte <code>Ctrl + Shift + Esc</code> para abrir o <strong>Gerenciador de Tarefas</strong>, finalize <strong>Lume TV</strong> / <strong>mpv</strong> / <strong>torrserver</strong> e rode <code>Instalar-Lume-TV-2.2.0.exe</code> por cima normalmente (não precisa desinstalar)."
+          ]
+        },
+        {
+          tag: "TELA CHEIA / PRETA",
+          q: "Tela ficou preta depois de sair do modo Tela Cheia (Fullscreen) ou minimizado",
+          intro: "Em alguns drivers de placa de vídeo Windows, alternar tela cheia pausava o redesenho da janela.",
+          steps: [
+            "Atualize para a versão <strong>2.2.0</strong>, que corrige definitivamente a tela preta ao restaurar do Fullscreen.",
+            "Se estiver em versão antiga presa agora, aperte <code>Alt + Enter</code> (ou <code>F11</code>) para alternar o modo da janela antes de fechar."
+          ]
+        },
+        {
+          tag: "ÁUDIO / SOM",
+          q: "O vídeo toca no Windows, mas sai sem som (ou mudo no HDMI/Bluetooth)",
+          intro: "A v2.2.0 adiciona cadeia automática WASAPI → WinMM → SDL e verificação anti-mudo.",
+          steps: [
+            "Atualize para a <strong>2.2.0</strong>: se um driver falhar, o player alterna automaticamente para a próxima saída de áudio sem ficar mudo.",
+            "Confira no canto do relógio do Windows (ícone de alto-falante) se o dispositivo de saída correto (TV HDMI ou fone) está selecionado antes de abrir o vídeo."
+          ]
+        },
+        {
+          tag: "32 vs 64 BITS",
+          q: "Qual baixar no Windows: 64 bits ou 32 bits?",
+          intro: "O instalador oficial detecta o seu sistema sozinho.",
+          steps: [
+            "Se usar o <strong>Instalador Universal (.exe)</strong>, ele detecta automaticamente se o Windows é 64 bits ou 32 bits (incluindo Windows 7 antigo sem SP1).",
+            "Só escolha entre <code>Win64.zip</code> e <code>Win7-x86.zip</code> se você baixar a versão Portátil em ZIP."
+          ]
+        },
+        {
+          tag: "YOUTUBE / PT-BR",
+          q: "Onde fica o YouTube sem anúncios e como mudar capas em português no PC?",
+          intro: "Tudo fica visível direto no topo da interface.",
+          steps: [
+            "Clique em <strong>YouTube</strong> na barra superior da Home (oculto apenas no Perfil Infantil).",
+            "Para desligar/ligar a tradução automática de capas e títulos, abra <strong>Ajustes → Capas e títulos em português</strong>."
+          ]
         }
       ]
     }
@@ -771,6 +972,198 @@
 
   let currentGuidePlatform = "android";
   let currentIosMethod = "sidestore";
+  let currentErrorQuery = "";
+  const PLATFORM_NAMES = {
+    android: "Celular Android",
+    iphone: "iPhone (iOS)",
+    firestick: "Fire TV Stick",
+    androidtv: "Android TV / Google TV",
+    windows: "Windows (7 ao 11)"
+  };
+
+  function renderErrorList(platform, queryText) {
+    const data = INSTALL_GUIDES[platform];
+    if (!data || !errorList) return;
+    const rawQ = String(queryText || "").trim();
+    const q = rawQ.toLowerCase();
+
+    let entries = (data.errors || []).map((err) => ({ ...err, platformName: null }));
+    let crossPlatform = false;
+    if (q) {
+      entries = entries.filter((err) =>
+        `${err.tag} ${err.q} ${err.intro} ${(err.steps || []).join(" ")}`.toLowerCase().includes(q)
+      );
+      if (entries.length === 0) {
+        const all = [];
+        Object.keys(INSTALL_GUIDES).forEach((pk) => {
+          (INSTALL_GUIDES[pk].errors || []).forEach((err) => {
+            if (`${err.tag} ${err.q} ${err.intro} ${(err.steps || []).join(" ")}`.toLowerCase().includes(q)) {
+              all.push({ ...err, platformName: PLATFORM_NAMES[pk] || pk });
+            }
+          });
+        });
+        if (all.length > 0) {
+          entries = all;
+          crossPlatform = true;
+        }
+      }
+    }
+
+    if (troubleshootTitle) {
+      troubleshootTitle.textContent = crossPlatform
+        ? `Resultados em todos os aparelhos para “${rawQ}”`
+        : data.errorsTitle;
+    }
+    if (errorCountPill) {
+      errorCountPill.textContent = entries.length === 1 ? "1 solução" : `${entries.length} soluções`;
+    }
+
+    if (entries.length === 0) {
+      errorList.innerHTML = `<div class="err-empty">Nenhuma solução encontrada para <strong>${rawQ}</strong>. Tente termos como <em>som</em>, <em>atualizar</em>, <em>Fire OS 6</em>, <em>tela preta</em>, <em>YouTube</em> ou <em>termos</em>.</div>`;
+      return;
+    }
+
+    errorList.innerHTML = entries
+      .map(
+        (err, idx) => `
+          <div class="error-item ${idx === 0 ? "is-open" : ""}">
+            <button type="button" class="error-q" aria-expanded="${idx === 0 ? "true" : "false"}">
+              <span class="error-q-left">
+                <span class="error-badge">${err.tag}</span>
+                ${err.platformName ? `<span class="err-platform-tag">${err.platformName}</span>` : ""}
+                <span>${err.q}</span>
+              </span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="error-a" ${idx === 0 ? "" : "hidden"}>
+              <p>${withActiveCode(err.intro)}</p>
+              <ol>${err.steps.map((s) => `<li>${withActiveCode(s)}</li>`).join("")}</ol>
+            </div>
+          </div>
+        `
+      )
+      .join("");
+
+    errorList.querySelectorAll(".error-item").forEach((item) => {
+      const btn = item.querySelector(".error-q");
+      const ans = item.querySelector(".error-a");
+      if (!btn || !ans) return;
+      btn.addEventListener("click", () => {
+        const willOpen = ans.hidden;
+        ans.hidden = !willOpen;
+        item.classList.toggle("is-open", willOpen);
+        btn.setAttribute("aria-expanded", String(willOpen));
+      });
+    });
+  }
+
+  function renderGuide(platform, iosMethod) {
+    const data = INSTALL_GUIDES[platform];
+    if (!data) return;
+    currentGuidePlatform = platform;
+    if (iosMethod) currentIosMethod = iosMethod;
+
+    document.querySelectorAll(".guide-tab").forEach((t) => {
+      const active = t.dataset.guide === platform;
+      t.classList.toggle("is-active", active);
+      t.setAttribute("aria-selected", String(active));
+    });
+
+    const isIos = platform === "iphone";
+    if (iphoneMethodTabs) {
+      iphoneMethodTabs.hidden = !isIos;
+      if (isIos) {
+        iphoneMethodTabs.querySelectorAll(".guide-subtab").forEach((b) => {
+          const active = b.dataset.iosMethod === currentIosMethod;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-selected", String(active));
+        });
+      }
+    }
+
+    const activeView = isIos ? data.methods[currentIosMethod] : data;
+    if (guideSummary) guideSummary.innerHTML = activeView.summary;
+
+    if (guideStepsGrid) {
+      guideStepsGrid.innerHTML = activeView.steps
+        .map(
+          (step, i) => `
+          <article class="guide-step-card">
+            <div>
+              <span class="guide-step-num">PASSO 0${i + 1}</span>
+              <h4>${withActiveCode(step.title)}</h4>
+              <p>${withActiveCode(step.desc)}</p>
+            </div>
+            ${buildMockHtml(step.mock)}
+          </article>
+        `
+        )
+        .join("");
+    }
+
+    renderErrorList(platform, currentErrorQuery);
+  }
+
+  const errSearchInput = document.getElementById("errorSearchInput");
+  const errSearchClear = document.getElementById("errorSearchClear");
+  const errChips = document.querySelectorAll(".err-chip");
+  function setErrorFilter(val) {
+    currentErrorQuery = String(val || "");
+    if (errSearchInput && errSearchInput.value !== currentErrorQuery) {
+      errSearchInput.value = currentErrorQuery;
+    }
+    if (errSearchClear) errSearchClear.hidden = !currentErrorQuery.trim();
+    const norm = currentErrorQuery.trim().toLowerCase();
+    errChips.forEach((chip) => {
+      chip.classList.toggle("is-active", norm !== "" && chip.dataset.errQuery.toLowerCase() === norm);
+    });
+    renderErrorList(currentGuidePlatform, currentErrorQuery);
+  }
+  if (errSearchInput) {
+    errSearchInput.addEventListener("input", (e) => setErrorFilter(e.target.value));
+  }
+  if (errSearchClear) {
+    errSearchClear.addEventListener("click", () => setErrorFilter(""));
+  }
+  errChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const next = chip.classList.contains("is-active") ? "" : chip.dataset.errQuery;
+      setErrorFilter(next);
+    });
+  });
+
+  // Demo interativa PT-BR na seção #novidades
+  const ptDemoToggle = document.getElementById("ptDemoToggle");
+  if (ptDemoToggle) {
+    ptDemoToggle.addEventListener("click", () => {
+      const nextOn = !ptDemoToggle.classList.contains("is-on");
+      ptDemoToggle.classList.toggle("is-on", nextOn);
+      ptDemoToggle.setAttribute("aria-pressed", String(nextOn));
+      ptDemoToggle.textContent = nextOn ? "PT-BR Ativado" : "Original (EN)";
+      const c1 = document.getElementById("ptDemoChip1");
+      const t1 = document.getElementById("ptDemoTitle1");
+      const s1 = document.getElementById("ptDemoSub1");
+      const c2 = document.getElementById("ptDemoChip2");
+      const t2 = document.getElementById("ptDemoTitle2");
+      const s2 = document.getElementById("ptDemoSub2");
+      if (c1) c1.textContent = nextOn ? "BR" : "EN";
+      if (t1) t1.textContent = nextOn ? "Vingadores: Ultimato" : "Avengers: Endgame";
+      if (s1) s1.textContent = nextOn ? "Pôster & título em português" : "Pôster & título original";
+      if (c2) c2.textContent = nextOn ? "BR" : "EN";
+      if (t2) t2.textContent = nextOn ? "O Espetacular Homem-Aranha" : "The Amazing Spider-Man";
+      if (s2) s2.textContent = nextOn ? "Séries, filmes e animes" : "Catálogo no idioma original";
+    });
+  }
+
+  // Cartões clicáveis de dispositivos pulam para Download + selecionam aba
+  document.querySelectorAll("[data-jump-platform]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.jumpPlatform;
+      if (target) selectPlatform(target);
+      const sec = document.getElementById("baixar");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 
   // 3. Toast de notificação
   const toastEl = document.getElementById("toast");
@@ -978,87 +1371,6 @@
     `;
   }
 
-  function renderGuide(platform, iosMethod) {
-    const data = INSTALL_GUIDES[platform];
-    if (!data) return;
-    currentGuidePlatform = platform;
-    if (iosMethod) currentIosMethod = iosMethod;
-
-    document.querySelectorAll(".guide-tab").forEach((t) => {
-      const active = t.dataset.guide === platform;
-      t.classList.toggle("is-active", active);
-      t.setAttribute("aria-selected", String(active));
-    });
-
-    const isIos = platform === "iphone";
-    if (iphoneMethodTabs) {
-      iphoneMethodTabs.hidden = !isIos;
-      if (isIos) {
-        iphoneMethodTabs.querySelectorAll(".guide-subtab").forEach((b) => {
-          const active = b.dataset.iosMethod === currentIosMethod;
-          b.classList.toggle("is-active", active);
-          b.setAttribute("aria-selected", String(active));
-        });
-      }
-    }
-
-    const activeView = isIos ? data.methods[currentIosMethod] : data;
-    if (guideSummary) guideSummary.innerHTML = activeView.summary;
-
-    if (guideStepsGrid) {
-      guideStepsGrid.innerHTML = activeView.steps
-        .map(
-          (step, i) => `
-          <article class="guide-step-card">
-            <div>
-              <span class="guide-step-num">PASSO 0${i + 1}</span>
-              <h4>${withActiveCode(step.title)}</h4>
-              <p>${withActiveCode(step.desc)}</p>
-            </div>
-            ${buildMockHtml(step.mock)}
-          </article>
-        `
-        )
-        .join("");
-    }
-
-    if (troubleshootTitle) troubleshootTitle.textContent = data.errorsTitle;
-    if (errorCountPill) errorCountPill.textContent = `${data.errors.length} soluções`;
-
-    if (errorList) {
-      errorList.innerHTML = data.errors
-        .map(
-          (err, idx) => `
-          <div class="error-item ${idx === 0 ? "is-open" : ""}">
-            <button type="button" class="error-q" aria-expanded="${idx === 0 ? "true" : "false"}">
-              <span class="error-q-left">
-                <span class="error-badge">${err.tag}</span>
-                <span>${err.q}</span>
-              </span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="error-a" ${idx === 0 ? "" : "hidden"}>
-              <p>${err.intro}</p>
-              <ol>${err.steps.map((s) => `<li>${s}</li>`).join("")}</ol>
-            </div>
-          </div>
-        `
-        )
-        .join("");
-
-      errorList.querySelectorAll(".error-item").forEach((item) => {
-        const btn = item.querySelector(".error-q");
-        const ans = item.querySelector(".error-a");
-        if (!btn || !ans) return;
-        btn.addEventListener("click", () => {
-          const willOpen = ans.hidden;
-          ans.hidden = !willOpen;
-          item.classList.toggle("is-open", willOpen);
-          btn.setAttribute("aria-expanded", String(willOpen));
-        });
-      });
-    }
-  }
 
   document.querySelectorAll(".guide-tab").forEach((tab) => {
     tab.addEventListener("click", () => renderGuide(tab.dataset.guide, currentIosMethod));
@@ -1299,11 +1611,47 @@
 
   // 11. Reveal on Scroll (com atraso progressivo em grupos)
   const reveals = document.querySelectorAll(".reveal");
-  document.querySelectorAll(".whatsnew-strip, .player-areas-grid, .devices-grid, .bento-grid").forEach((grid) => {
+  document.querySelectorAll(".v2-showcase-grid, .player-areas-grid, .devices-grid, .bento-grid").forEach((grid) => {
     Array.from(grid.querySelectorAll(".reveal")).forEach((el, idx) => {
       el.style.setProperty("--stagger", String(idx % 6));
     });
   });
+
+  // Destaca item ativo da navbar e ativa luz sutil acompanhando o ponteiro
+  const navSectionLinks = Array.from(document.querySelectorAll(".nav-links a[href^='#']"));
+  if ("IntersectionObserver" in window && navSectionLinks.length) {
+    const secIo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            const id = "#" + en.target.id;
+            navSectionLinks.forEach((a) => a.classList.toggle("is-current", a.getAttribute("href") === id));
+          }
+        });
+      },
+      { rootMargin: "-35% 0px -55% 0px" }
+    );
+    navSectionLinks.forEach((a) => {
+      const target = document.querySelector(a.getAttribute("href"));
+      if (target) secIo.observe(target);
+    });
+  }
+
+  const ambientPointer = document.getElementById("ambientPointer");
+  if (ambientPointer && window.matchMedia && window.matchMedia("(pointer: fine)").matches) {
+    let px = "50%", py = "25%", rafPtr = 0;
+    window.addEventListener("pointermove", (e) => {
+      px = `${e.clientX}px`;
+      py = `${e.clientY}px`;
+      if (!rafPtr) {
+        rafPtr = requestAnimationFrame(() => {
+          rafPtr = 0;
+          ambientPointer.style.setProperty("--cx", px);
+          ambientPointer.style.setProperty("--cy", py);
+        });
+      }
+    }, { passive: true });
+  }
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {

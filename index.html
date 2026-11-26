@@ -15,16 +15,19 @@
   <link rel="apple-touch-icon" href="assets/icon-lume.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <!-- Fundo cinematográfico Cinema Prism -->
+  <!-- Fundo cinematográfico Cinema Prism 2.0 -->
   <div class="cinema-backdrop" aria-hidden="true">
     <canvas id="prismCanvas"></canvas>
+    <div class="cinema-grid"></div>
     <div class="aurora aurora-amber"></div>
     <div class="aurora aurora-coral"></div>
+    <div class="aurora aurora-indigo"></div>
+    <div class="ambient-pointer" id="ambientPointer"></div>
     <div class="grain"></div>
   </div>
 
@@ -37,6 +40,7 @@
       </a>
 
       <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#novidades">Novidades</a>
         <a href="#telas-reais">O Player</a>
         <a href="#youtube" class="nav-yt">
           <span class="pulse-dot" aria-hidden="true"></span>
@@ -135,6 +139,14 @@
         <!-- Palco Visual Hero: Notebook aberto + iPhone com Dynamic Island -->
         <div class="hero-stage">
           <div class="stage-ambilight" id="heroAmbilight" aria-hidden="true"></div>
+          <div class="stage-badge stage-badge-tl" aria-hidden="true">
+            <span class="sb-dot"></span>
+            <span>★ Top 10 da Semana</span>
+          </div>
+          <div class="stage-badge stage-badge-br" aria-hidden="true">
+            <span class="mono sb-tag">PT-BR</span>
+            <span>Capas, títulos &amp; áudio FFmpeg</span>
+          </div>
           <div class="hero-device-render">
             <img
               src="assets/hero-devices.webp?v=1"
@@ -155,15 +167,15 @@
         </div>
       </div>
 
-      <!-- Barra de métricas reais -->
-      <div class="container metrics-strip reveal">
+      <!-- Dock Unificado de Métricas Liquid Glass -->
+      <div class="container metrics-dock glass-panel reveal">
         <div class="metric-item">
           <strong class="metric-value">1,7 s</strong>
           <span>para iniciar a reprodução</span>
         </div>
         <div class="metric-item">
           <strong class="metric-value">PT-BR</strong>
-          <span>áudio e legendas em 1º lugar</span>
+          <span>capas, títulos e áudio em 1º</span>
         </div>
         <div class="metric-item">
           <strong class="metric-value">100%</strong>
@@ -178,37 +190,118 @@
           <span>código de ativação</span>
         </div>
       </div>
+    </section>
 
-      <!-- Destaques da Nova Versão -->
-      <div class="container whatsnew-strip reveal">
-        <article class="glass-card whatsnew-card spotlight-card">
-          <span class="whatsnew-badge mono">PT</span>
-          <div class="whatsnew-copy">
-            <strong>Capas e títulos em português</strong>
-            <span>Catálogo inteiro traduzido por padrão para PT-BR (ajustável nas configurações).</span>
-          </div>
-        </article>
-        <article class="glass-card whatsnew-card spotlight-card">
-          <span class="whatsnew-badge mono">10</span>
-          <div class="whatsnew-copy">
-            <strong>Top 10 filmes da semana</strong>
-            <span>Fileira horizontal com os filmes mais assistidos nos streamings.</span>
-          </div>
-        </article>
-        <article class="glass-card whatsnew-card spotlight-card">
-          <span class="whatsnew-badge mono">▶</span>
-          <div class="whatsnew-copy">
-            <strong>YouTube na barra superior</strong>
-            <span>Acesso rápido sem anúncios logo no topo do player (oculto no Kids).</span>
-          </div>
-        </article>
-        <article class="glass-card whatsnew-card spotlight-card">
-          <span class="whatsnew-badge mono">♪</span>
-          <div class="whatsnew-copy">
-            <strong>Áudio FFmpeg &amp; retomada exata</strong>
-            <span>Proteção anti-mudo ao iniciar e atualização Windows limpa sobre versões antigas.</span>
-          </div>
-        </article>
+    <!-- ==================== NOVIDADES 2.0 — VITRINE INTERATIVA ==================== -->
+    <section class="section" id="novidades">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker mono">NOVIDADES · ANDROID v<span data-mobile-version>2.1.0</span> · WINDOWS v<span data-windows-version>2.2.0</span> · iPHONE v<span data-mobile-version>2.1.0</span></span>
+          <h2>Visual renovado, português total e zero dor de cabeça.</h2>
+          <p class="section-sub">
+            Tudo o que acabou de chegar em todas as plataformas para você só abrir o player, escolher o vídeo e dar play.
+          </p>
+        </div>
+
+        <div class="v2-showcase-grid">
+          <!-- Card 1: Top 10 da Semana -->
+          <article class="glass-card v2-feature-card spotlight-card reveal">
+            <div class="v2-feature-head">
+              <span class="whatsnew-badge mono">10</span>
+              <div>
+                <h3>Top 10 filmes da semana</h3>
+                <p>Nova fileira horizontal em destaque com os 10 filmes mais assistidos nos streamings — com numeração em vidro translúcido atrás de cada pôster.</p>
+              </div>
+            </div>
+            <div class="mini-top10" aria-hidden="true">
+              <div class="mt10-item">
+                <span class="mt10-num">1</span>
+                <div class="mt10-poster mt10-p1">
+                  <span class="mt10-star">★ 8.4</span>
+                  <span class="mt10-title">Em Alta #1</span>
+                </div>
+              </div>
+              <div class="mt10-item">
+                <span class="mt10-num">2</span>
+                <div class="mt10-poster mt10-p2">
+                  <span class="mt10-star">★ 7.9</span>
+                  <span class="mt10-title">Streaming #2</span>
+                </div>
+              </div>
+              <div class="mt10-item">
+                <span class="mt10-num">3</span>
+                <div class="mt10-poster mt10-p3">
+                  <span class="mt10-star">★ 7.6</span>
+                  <span class="mt10-title">Semana #3</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Capas & Títulos PT-BR -->
+          <article class="glass-card v2-feature-card spotlight-card reveal">
+            <div class="v2-feature-head">
+              <span class="whatsnew-badge mono">PT</span>
+              <div>
+                <h3>Capas e títulos em português por padrão</h3>
+                <p>Todo o catálogo abre traduzido para o português do Brasil — e nos Ajustes você alterna de volta para o idioma original quando quiser.</p>
+              </div>
+            </div>
+            <div class="mini-pt-demo" id="ptDemoBox">
+              <div class="mini-pt-bar">
+                <span class="mono">Ajustes · Capas e títulos em PT-BR</span>
+                <button type="button" class="mini-pt-toggle is-on" id="ptDemoToggle" aria-pressed="true">PT-BR Ativado</button>
+              </div>
+              <div class="mini-pt-cards">
+                <div class="mini-pt-card">
+                  <span class="mini-pt-chip" id="ptDemoChip1">BR</span>
+                  <strong id="ptDemoTitle1">Vingadores: Ultimato</strong>
+                  <span id="ptDemoSub1">Pôster &amp; título em português</span>
+                </div>
+                <div class="mini-pt-card">
+                  <span class="mini-pt-chip" id="ptDemoChip2">BR</span>
+                  <strong id="ptDemoTitle2">O Espetacular Homem-Aranha</strong>
+                  <span id="ptDemoSub2">Séries, filmes e animes</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: YouTube na Barra Superior -->
+          <article class="glass-card v2-feature-card spotlight-card reveal">
+            <div class="v2-feature-head">
+              <span class="whatsnew-badge mono">▶</span>
+              <div>
+                <h3>YouTube sem anúncios na barra superior</h3>
+                <p>Saiu do menu escondido do perfil e foi direto para o topo em Android, Fire Stick, iPhone e Windows (oculto automaticamente no Perfil Infantil).</p>
+              </div>
+            </div>
+            <div class="mini-nav-preview" aria-hidden="true">
+              <div class="mini-nav-pill">Início</div>
+              <div class="mini-nav-pill">Filmes</div>
+              <div class="mini-nav-pill">Séries</div>
+              <div class="mini-nav-pill">Minha lista</div>
+              <div class="mini-nav-pill mini-nav-pill-yt">▶ YouTube</div>
+            </div>
+          </article>
+
+          <!-- Card 4: Áudio FFmpeg, Anti-Mudo & Termos + Atualização Limpa -->
+          <article class="glass-card v2-feature-card spotlight-card reveal">
+            <div class="v2-feature-head">
+              <span class="whatsnew-badge mono">♪</span>
+              <div>
+                <h3>Áudio FFmpeg, retomada exata e upgrade limpo</h3>
+                <p>Sem vídeo abrindo mudo, continuação exatamente onde parou entre telas, Termos de Uso claros por atualização e instalador Windows sem erro ao atualizar por cima.</p>
+              </div>
+            </div>
+            <div class="mini-health-grid" aria-hidden="true">
+              <span class="health-chip">✓ Decoder FFmpeg nativo</span>
+              <span class="health-chip">✓ Anti-mudo +2,5s</span>
+              <span class="health-chip">✓ Retomada exata salva</span>
+              <span class="health-chip">✓ Win7–11 sobrescreve sem erro</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -650,50 +743,55 @@
         </div>
 
         <div class="devices-grid reveal">
-          <article class="glass-card device-card">
+          <button type="button" class="glass-card device-card spotlight-card" data-jump-platform="android">
             <div class="device-top">
               <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">APK</span>
             </div>
             <h3>Celular &amp; Tablet Android</h3>
             <p>Toque duplo ±15s, envio direto para o player da TV e acesso rápido ao YouTube sem anúncios direto na barra superior.</p>
-          </article>
+            <span class="device-jump mono">Baixar para Android →</span>
+          </button>
 
-          <article class="glass-card device-card">
+          <button type="button" class="glass-card device-card spotlight-card" data-jump-platform="androidtv">
             <div class="device-top">
               <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">TV</span>
             </div>
             <h3>Android TV &amp; Google TV</h3>
             <p>Navegação 100% pelo controle remoto com Top 10 da semana, capas em PT-BR e suporte a áudio FFmpeg.</p>
-          </article>
+            <span class="device-jump mono">Baixar para TV →</span>
+          </button>
 
-          <article class="glass-card device-card">
+          <button type="button" class="glass-card device-card spotlight-card" data-jump-platform="firestick">
             <div class="device-top">
               <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">32-bit</span>
             </div>
             <h3>Amazon Fire TV Stick</h3>
             <p>Versão leve compatível também com Fire Stick antigo (API 25+), rodando liso a 60 fps com consumo mínimo de memória.</p>
-          </article>
+            <span class="device-jump mono">Baixar para Fire Stick →</span>
+          </button>
 
-          <article class="glass-card device-card">
+          <button type="button" class="glass-card device-card spotlight-card" data-jump-platform="windows">
             <div class="device-top">
               <span class="status-pill status-live">● Disponível · v<span data-windows-version>2.2.0</span></span>
               <span class="mono device-arch">Win7–11</span>
             </div>
             <h3>Windows (do 7 ao 11)</h3>
             <p>Janela nativa com player acoplado e instalador em 1 clique — atualiza sobre versões antigas sem erros (32 e 64 bits).</p>
-          </article>
+            <span class="device-jump mono">Baixar para Windows →</span>
+          </button>
 
-          <article class="glass-card device-card">
+          <button type="button" class="glass-card device-card spotlight-card" data-jump-platform="iphone">
             <div class="device-top">
               <span class="status-pill status-live">● Disponível · v<span data-mobile-version>2.1.0</span></span>
               <span class="mono device-arch">iOS</span>
             </div>
             <h3>iPhone (iOS)</h3>
             <p>Visual Liquid Glass feito para iPhone, suporte a Picture-in-Picture (PiP) e armazenamento offline dos seus episódios.</p>
-          </article>
+            <span class="device-jump mono">Baixar para iPhone →</span>
+          </button>
         </div>
 
         <!-- Banner Especial: Roku TV e Samsung Tizen OS -->
@@ -906,11 +1004,32 @@
           <div class="troubleshoot-panel" id="troubleshootPanel">
             <div class="troubleshoot-head">
               <div>
-                <span class="kicker mono">SOLUÇÃO DE PROBLEMAS</span>
+                <span class="kicker mono">CENTRAL DE SOLUÇÕES · BUSCA INSTANTÂNEA</span>
                 <h3 id="troubleshootTitle">Erros mais comuns e como resolver</h3>
               </div>
-              <span class="mono error-count-pill" id="errorCountPill">6 soluções</span>
+              <span class="mono error-count-pill" id="errorCountPill">10 soluções</span>
             </div>
+
+            <div class="troubleshoot-tools">
+              <div class="err-search-wrap">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+                <input type="search" id="errorSearchInput" class="err-search-input" placeholder="Buscar erro ou dúvida (ex.: sem som, atualizar por cima, Fire OS 6, tela preta, YouTube, termos)..." autocomplete="off">
+                <button type="button" id="errorSearchClear" class="err-search-clear" hidden aria-label="Limpar busca">Limpar</button>
+              </div>
+              <div class="err-chips" role="group" aria-label="Filtros rápidos de problemas comuns">
+                <button type="button" class="err-chip" data-err-query="som">Sem som / mudo</button>
+                <button type="button" class="err-chip" data-err-query="atualizar">Atualizar por cima</button>
+                <button type="button" class="err-chip" data-err-query="Fire OS 6">Fire Stick antigo</button>
+                <button type="button" class="err-chip" data-err-query="tela preta">Tela preta</button>
+                <button type="button" class="err-chip" data-err-query="termos">Termos / botão travado</button>
+                <button type="button" class="err-chip" data-err-query="YouTube">Onde fica o YouTube</button>
+                <button type="button" class="err-chip" data-err-query="inglês">Capas em português</button>
+              </div>
+            </div>
+
             <div class="error-list" id="errorList"></div>
           </div>
         </div>
