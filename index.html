@@ -1154,6 +1154,7 @@
               <img src="assets/qr/qr-pix.svg" alt="QR Code Pix para apoiar o projeto Lume TV" width="160" height="160" loading="lazy">
             </div>
             <span class="mono support-qr-label">Apoie via Pix · qualquer quantia</span>
+            <button type="button" class="qr-pill support-copy" data-copy-pix="6cd578a1-9a28-487b-81f9-3d266182c4e8" aria-label="Copiar chave Pix">Copiar chave Pix</button>
           </div>
         </div>
       </div>
@@ -1192,5 +1193,8 @@
 
   <script src="js/app.js"></script>
   <script src="js/liquid-glass.js?v=3.0" defer></script>
+<script>
+document.querySelectorAll('[data-copy-pix]').forEach(function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-copy-pix'),t=b.textContent;function ok(){b.textContent='Chave copiada!';setTimeout(function(){b.textContent=t},2200)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(k).then(ok,function(){prompt('Copie a chave Pix:',k)})}else{prompt('Copie a chave Pix:',k)}})});
+</script>
 </body>
 </html>

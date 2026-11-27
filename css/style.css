@@ -3260,3 +3260,6 @@ a:focus-visible,
     align-items: center;
   }
 }
+
+/* Botão copiar chave Pix (apoie) */
+.support-copy { margin-top: 10px; cursor: pointer; }
