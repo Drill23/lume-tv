@@ -927,6 +927,16 @@
           ]
         },
         {
+          tag: "BLOQUEIO",
+          q: "“O Windows não pode acessar o dispositivo, caminho ou arquivo especificado” / LumeTV.exe não abre",
+          intro: "O Windows marca arquivos baixados da internet como bloqueados e pode impedir o LumeTV.exe de abrir.",
+          steps: [
+            "Clique com o botão direito no arquivo <code>.zip</code> → <strong>Propriedades</strong> → marque <strong>Desbloquear</strong> → <strong>OK</strong>.",
+            "Extraia o <code>.zip</code> de novo para uma pasta normal e abra o <code>LumeTV.exe</code> de lá.",
+            "Se o antivírus bloquear, permita o app em <strong>Segurança do Windows → Proteção contra vírus e ameaças → Histórico de proteção</strong>."
+          ]
+        },
+        {
           tag: "TELA / VÍDEO",
           q: "Janela abriu branca ou o vídeo fechou no PC antigo sem placa de vídeo moderna",
           intro: "Drivers antigos de vídeo no Windows 7/8 podem rejeitar aceleração padrão.",
