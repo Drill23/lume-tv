@@ -1323,6 +1323,9 @@
       });
     }
 
+    const dlWinNote = document.getElementById("dlWinNote");
+    if (dlWinNote) dlWinNote.hidden = key !== "windows";
+
     if (dlSteps) {
       dlSteps.innerHTML = data.steps.map((s) => `<li>${withActiveCode(s)}</li>`).join("");
     }
