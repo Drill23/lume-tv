@@ -44,6 +44,8 @@
     ".yt-mode-btn",
     ".err-chip",
     ".nav-support",
+    ".nav-music",
+    ".lm-cta-btn",
     ".err-search-clear",
     ".platform-chip",
     ".mobile-drawer a"
